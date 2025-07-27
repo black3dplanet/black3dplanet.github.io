@@ -158,8 +158,8 @@
         <div class="gallery">
             <div class="image-card">
                 <div class="image-container">
-                    <img src="imgs/pic61825.jpg" alt="Image 1" loading="lazy">
-                    <button class="download-btn" onclick="downloadImage('imgs/pic61825.jpg', 'pic61825.jpg')">
+                    <img src="./imgs/pic61825.jpg" alt="Image 1" loading="lazy">
+                    <button class="download-btn" onclick="downloadImage('./imgs/pic61825.jpg', 'pic61825.jpg')">
                         <svg class="download-icon" viewBox="0 0 24 24">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                         </svg>
@@ -173,8 +173,8 @@
 
             <div class="image-card">
                 <div class="image-container">
-                    <img src="imgs/pic61725.jpg" alt="Image 2" loading="lazy">
-                    <button class="download-btn" onclick="downloadImage('imgs/pic61725.jpg', 'pic61725.jpg')">
+                    <img src="./imgs/pic61725.jpg" alt="Image 2" loading="lazy">
+                    <button class="download-btn" onclick="downloadImage('./imgs/pic61725.jpg', 'pic61725.jpg')">
                         <svg class="download-icon" viewBox="0 0 24 24">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                         </svg>
@@ -188,8 +188,8 @@
 
             <div class="image-card">
                 <div class="image-container">
-                    <img src="imgs/pic61825c.jpg" alt="Image 3" loading="lazy">
-                    <button class="download-btn" onclick="downloadImage('imgs/pic61825c.jpg', 'pic61825c.jpg')">
+                    <img src="./imgs/pic61825c.jpg" alt="Image 3" loading="lazy">
+                    <button class="download-btn" onclick="downloadImage('./imgs/pic61825c.jpg', 'pic61825c.jpg')">
                         <svg class="download-icon" viewBox="0 0 24 24">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                         </svg>
@@ -203,8 +203,8 @@
 
             <div class="image-card">
                 <div class="image-container">
-                    <img src="imgs/pic61725c.jpg" alt="Image 4" loading="lazy">
-                    <button class="download-btn" onclick="downloadImage('imgs/pic61725c.jpg', 'pic61725c.jpg')">
+                    <img src="./imgs/pic61725c.jpg" alt="Image 4" loading="lazy">
+                    <button class="download-btn" onclick="downloadImage('./imgs/pic61725c.jpg', 'pic61725c.jpg')">
                         <svg class="download-icon" viewBox="0 0 24 24">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                         </svg>
@@ -218,8 +218,8 @@
 
             <div class="image-card">
                 <div class="image-container">
-                    <img src="imgs/pic61825d.jpg" alt="Image 5" loading="lazy">
-                    <button class="download-btn" onclick="downloadImage('imgs/pic61825d.jpg', 'pic61825d.jpg')">
+                    <img src="./imgs/pic61825d.jpg" alt="Image 5" loading="lazy">
+                    <button class="download-btn" onclick="downloadImage('./imgs/pic61825d.jpg', 'pic61825d.jpg')">
                         <svg class="download-icon" viewBox="0 0 24 24">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                         </svg>
@@ -233,8 +233,8 @@
 
             <div class="image-card">
                 <div class="image-container">
-                    <img src="imgs/pic61825b.jpg" alt="Image 6" loading="lazy">
-                    <button class="download-btn" onclick="downloadImage('imgs/pic61825b.jpg', 'pic61825b.jpg')">
+                    <img src="./imgs/pic61825b.jpg" alt="Image 6" loading="lazy">
+                    <button class="download-btn" onclick="downloadImage('./imgs/pic61825b.jpg', 'pic61825b.jpg')">
                         <svg class="download-icon" viewBox="0 0 24 24">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                         </svg>
@@ -298,6 +298,13 @@
             images.forEach(img => {
                 img.addEventListener('load', function() {
                     this.style.opacity = '1';
+                });
+                
+                img.addEventListener('error', function() {
+                    console.error('Failed to load image:', this.src);
+                    this.style.opacity = '0.5';
+                    this.style.filter = 'grayscale(100%)';
+                    this.alt = 'Image failed to load: ' + this.src;
                 });
                 
                 img.style.opacity = '0';
