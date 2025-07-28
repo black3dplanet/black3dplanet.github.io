@@ -25,10 +25,20 @@
 
         h1 {
             text-align: center;
-            color: white;
+            color: #1976d2;
             margin-bottom: 30px;
             font-size: 2.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .notice {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            color: #856404;
+            text-align: center;
         }
 
         .gallery {
@@ -57,6 +67,10 @@
             width: 100%;
             height: 200px;
             overflow: hidden;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .image-container img {
@@ -64,6 +78,13 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s ease;
+        }
+
+        .placeholder-text {
+            color: #6c757d;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 20px;
         }
 
         .image-card:hover .image-container img {
@@ -115,6 +136,15 @@
             line-height: 1.4;
         }
 
+        .file-info {
+            background: #f8f9fa;
+            border-radius: 5px;
+            padding: 8px;
+            margin-top: 8px;
+            font-size: 0.8rem;
+            color: #6c757d;
+        }
+
         @media (max-width: 768px) {
             .gallery {
                 grid-template-columns: repeat(2, 1fr);
@@ -155,11 +185,16 @@
     <div class="container">
         <h1>Image Gallery</h1>
         
+        <div class="notice">
+            <strong>Note:</strong> Due to large file sizes (5-16MB each), placeholder images are shown. 
+            Click the download button to access the original high-resolution images from the repository.
+        </div>
+        
         <div class="gallery">
             <div class="image-card">
                 <div class="image-container">
-                    <img src="./imgs/pic61825.jpg" alt="Image 1" loading="lazy">
-                    <button class="download-btn" onclick="downloadImage('./imgs/pic61825.jpg', 'pic61825.jpg')">
+                    <img src="https://picsum.photos/400/300?random=1" alt="pic61825.jpg" loading="lazy">
+                    <button class="download-btn" onclick="downloadImage('pic61825.jpg')">
                         <svg class="download-icon" viewBox="0 0 24 24">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                         </svg>
@@ -168,13 +203,14 @@
                 <div class="image-info">
                     <div class="image-title">Beautiful Landscape</div>
                     <div class="image-description">Stunning natural scenery with mountains and valleys</div>
+                    <div class="file-info">File: pic61825.jpg (16MB)</div>
                 </div>
             </div>
 
             <div class="image-card">
                 <div class="image-container">
-                    <img src="./imgs/pic61725.jpg" alt="Image 2" loading="lazy">
-                    <button class="download-btn" onclick="downloadImage('./imgs/pic61725.jpg', 'pic61725.jpg')">
+                    <img src="https://picsum.photos/400/300?random=2" alt="pic61725.jpg" loading="lazy">
+                    <button class="download-btn" onclick="downloadImage('pic61725.jpg')">
                         <svg class="download-icon" viewBox="0 0 24 24">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                         </svg>
@@ -183,13 +219,14 @@
                 <div class="image-info">
                     <div class="image-title">Urban Architecture</div>
                     <div class="image-description">Modern cityscape with contemporary buildings</div>
+                    <div class="file-info">File: pic61725.jpg (10MB)</div>
                 </div>
             </div>
 
             <div class="image-card">
                 <div class="image-container">
-                    <img src="./imgs/pic61825c.jpg" alt="Image 3" loading="lazy">
-                    <button class="download-btn" onclick="downloadImage('./imgs/pic61825c.jpg', 'pic61825c.jpg')">
+                    <img src="https://picsum.photos/400/300?random=3" alt="pic61825c.jpg" loading="lazy">
+                    <button class="download-btn" onclick="downloadImage('pic61825c.jpg')">
                         <svg class="download-icon" viewBox="0 0 24 24">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                         </svg>
@@ -198,13 +235,14 @@
                 <div class="image-info">
                     <div class="image-title">Ocean Waves</div>
                     <div class="image-description">Peaceful ocean scene with crashing waves</div>
+                    <div class="file-info">File: pic61825c.jpg (5.1MB)</div>
                 </div>
             </div>
 
             <div class="image-card">
                 <div class="image-container">
-                    <img src="./imgs/pic61725c.jpg" alt="Image 4" loading="lazy">
-                    <button class="download-btn" onclick="downloadImage('./imgs/pic61725c.jpg', 'pic61725c.jpg')">
+                    <img src="https://picsum.photos/400/300?random=4" alt="pic61725c.jpg" loading="lazy">
+                    <button class="download-btn" onclick="downloadImage('pic61725c.jpg')">
                         <svg class="download-icon" viewBox="0 0 24 24">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                         </svg>
@@ -213,13 +251,14 @@
                 <div class="image-info">
                     <div class="image-title">Forest Path</div>
                     <div class="image-description">Serene forest trail surrounded by tall trees</div>
+                    <div class="file-info">File: pic61725c.jpg (15MB)</div>
                 </div>
             </div>
 
             <div class="image-card">
                 <div class="image-container">
-                    <img src="./imgs/pic61825d.jpg" alt="Image 5" loading="lazy">
-                    <button class="download-btn" onclick="downloadImage('./imgs/pic61825d.jpg', 'pic61825d.jpg')">
+                    <img src="https://picsum.photos/400/300?random=5" alt="pic61825d.jpg" loading="lazy">
+                    <button class="download-btn" onclick="downloadImage('pic61825d.jpg')">
                         <svg class="download-icon" viewBox="0 0 24 24">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                         </svg>
@@ -228,13 +267,14 @@
                 <div class="image-info">
                     <div class="image-title">Sunset Sky</div>
                     <div class="image-description">Breathtaking sunset with vibrant colors</div>
+                    <div class="file-info">File: pic61825d.jpg (11MB)</div>
                 </div>
             </div>
 
             <div class="image-card">
                 <div class="image-container">
-                    <img src="./imgs/pic61825b.jpg" alt="Image 6" loading="lazy">
-                    <button class="download-btn" onclick="downloadImage('./imgs/pic61825b.jpg', 'pic61825b.jpg')">
+                    <img src="https://picsum.photos/400/300?random=6" alt="pic61825b.jpg" loading="lazy">
+                    <button class="download-btn" onclick="downloadImage('pic61825b.jpg')">
                         <svg class="download-icon" viewBox="0 0 24 24">
                             <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
                         </svg>
@@ -243,40 +283,40 @@
                 <div class="image-info">
                     <div class="image-title">Mountain Peak</div>
                     <div class="image-description">Majestic mountain range with snow-capped peaks</div>
+                    <div class="file-info">File: pic61825b.jpg (7.9MB)</div>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="loading" id="loading">
-        Downloading image...
+        Opening download link...
     </div>
 
     <script>
-        async function downloadImage(imageUrl, filename) {
+        function downloadImage(filename) {
             const loading = document.getElementById('loading');
             loading.style.display = 'block';
             
             try {
-                const response = await fetch(imageUrl);
-                const blob = await response.blob();
+                // Get the current page URL to construct the GitHub Pages URL
+                const currentUrl = window.location.href;
+                const baseUrl = currentUrl.replace(/\/$/, ''); // Remove trailing slash if present
+                const imageUrl = `${baseUrl}/imgs/${filename}`;
                 
-                const url = window.URL.createObjectURL(blob);
+                // Create a temporary link to download the file
                 const a = document.createElement('a');
-                a.style.display = 'none';
-                a.href = url;
+                a.href = imageUrl;
                 a.download = filename;
-                
-                document.body.appendChild(a);
-                a.click();
-                
-                window.URL.revokeObjectURL(url);
-                document.body.removeChild(a);
+                a.target = '_blank';
                 
                 // Show success feedback
                 const btn = event.target.closest('.download-btn');
                 btn.style.background = '#4CAF50';
                 btn.querySelector('.download-icon').style.fill = 'white';
+                
+                // Open the link
+                a.click();
                 
                 setTimeout(() => {
                     btn.style.background = 'rgba(255, 255, 255, 0.9)';
