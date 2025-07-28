@@ -29,6 +29,38 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts - Baumans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet">
+    
+    <!-- Black3DPlanet Title Styles -->
+    <style>
+        .title-3d {
+            font-family: 'Baumans', 'Arial Black', 'Helvetica Bold', 'Arial', sans-serif !important;
+            color: #87CEEB !important;
+            text-shadow: 
+                2px 2px 0px #34495e,
+                4px 4px 0px #7f8c8d,
+                6px 6px 0px #bdc3c7,
+                8px 8px 0px #ecf0f1,
+                0px 0px 20px rgba(44, 62, 80, 0.3) !important;
+            transform: perspective(500px) rotateX(10deg) !important;
+            transform-style: preserve-3d !important;
+            letter-spacing: 2px !important;
+            font-weight: 900 !important;
+            transition: all 0.3s ease !important;
+            font-size: 3.75rem !important;
+        }
+        
+        /* Mobile responsive for Black3DPlanet title */
+        @media (max-width: 768px) {
+            .title-3d {
+                font-size: 2.625rem !important; /* 30% smaller than 3.75rem */
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="app" class="min-h-screen">
@@ -203,11 +235,9 @@
                 <div class="footer-social">
                     <a href="https://instagram.com/black3dplanet" target="_blank" class="social-link">
                         <img src="instagramlogo1.png" alt="Instagram" class="social-icon" height="15px" width="15px">
-                        <span>@black3dplanet</span>
                     </a>
                     <a href="https://twitter.com/black3dplanet" target="_blank" class="social-link">
                         <img src="twtrlogo1.png" alt="Twitter" class="social-icon"  height="15px" width="15px">
-                        <span>@black3dplanet</span>
                     </a>
                 </div>
             </div>
