@@ -316,8 +316,13 @@ body {
     }
 }
 
-/* Mobile Articles Layout */
-@media (max-width: 768px) {
+
+
+/* Mobile Articles Layout 
+@media (max-width: 768px) */
+
+
+@media only screen and (max-device-width: 480px) {
     .articles-section {
         margin-top: 2rem;
         padding: 1.5rem 0;
