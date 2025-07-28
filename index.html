@@ -71,6 +71,9 @@
                 <div class="text-center mb-4">
                     <h1 class="text-6xl font-bold text-gray-800 title-3d">Black3DPlanet</h1>
                 </div>
+                <div class="text-center mb-4 text-black" >
+                    Black culture 🪐 and backgrounds across the cosmos 
+                    </div>
                 
                 <input 
                     type="text" 
@@ -172,6 +175,11 @@
                                     <div class="text-xs mt-1 text-red-500">{{ wallpaper.github_raw_url }}</div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="download-button-container">
+                            <button class="download-button" @click="downloadImage(wallpaper.filename)">
+                                Download
+                            </button>
                         </div>
 
                         <!-- Mobile Info Panel -->
