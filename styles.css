@@ -406,6 +406,17 @@ body {
 
 /* Mobile Footer Layout */
 @media (max-width: 768px) {
+
+    .image-container {
+        height: auto;
+    }
+
+    .image-container img {
+        width: 50%;  /* or any appropriate value */
+        height: auto;
+        object-fit: contain;
+    }
+
     .footer-content {
         flex-direction: column;
         text-align: center;
@@ -434,7 +445,7 @@ body {
     .instagram-icon,
     .twitter-icon,
     .social-icon {
-        width: 4px;
-        height: 4px;
+        width: 14px;
+        height: 14px;
     }
 } 
