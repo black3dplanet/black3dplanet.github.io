@@ -11,6 +11,23 @@ body {
     color: var(--dark-text);
 }
 
+/* Black3DPlanet Title Styles */
+.title-3d {
+    font-family: 'Baumans', 'Arial Black', 'Helvetica Bold', sans-serif;
+    color: #87CEEB !important;
+    text-shadow: 
+        2px 2px 0px #34495e,
+        4px 4px 0px #7f8c8d,
+        6px 6px 0px #bdc3c7,
+        8px 8px 0px #ecf0f1,
+        0px 0px 20px rgba(44, 62, 80, 0.3);
+    transform: perspective(500px) rotateX(10deg);
+    transform-style: preserve-3d;
+    letter-spacing: 2px;
+    font-weight: 900;
+    transition: all 0.3s ease;
+}
+
 .neon-text {
     color: var(--neon-teal);
     text-shadow: 0 0 2px var(--neon-teal);
@@ -203,6 +220,11 @@ body {
 
     /* Mobile title size reduction */
     .text-6xl {
+        font-size: 2.625rem !important; /* 30% smaller than 3.75rem */
+    }
+    
+    /* Black3DPlanet title mobile size reduction */
+    .title-3d {
         font-size: 2.625rem !important; /* 30% smaller than 3.75rem */
     }
 
@@ -409,8 +431,9 @@ body {
     transform: scale(1.1);
 }
 
-/* Mobile Footer Layout */
-@media (max-width: 768px) {
+/* Mobile Footer Layout 
+@media (max-width: 768px) { */
+@media only screen and (max-device-width: 480px) {
 
     .image-container {
         width: 100%;
