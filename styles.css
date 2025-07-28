@@ -201,6 +201,11 @@ body {
         padding: 0.5rem;
     }
 
+    /* Mobile title size reduction */
+    .text-6xl {
+        font-size: 2.625rem !important; /* 30% smaller than 3.75rem */
+    }
+
     .mobile-info-panel {
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         max-height: 0;
