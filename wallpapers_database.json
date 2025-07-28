@@ -1,6 +1,6 @@
 {
-  "pic71725.jpg": {
-    "filename": "pic71725.jpg",
+  "pic71725.png": {
+    "filename": "pic71725.png",
     "tags": ["landscape", "nature", "high-resolution", "beautiful"],
     "metadata": {
       "width": 4000,
@@ -9,10 +9,10 @@
       "file_size": 16777216,
       "file_size_mb": 16.0
     },
-    "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71725.jpg"
+    "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71725.png"
   },
-  "pic71725b.jpg": {
-    "filename": "pic71725b.jpg",
+  "pic71725b.png": {
+    "filename": "pic71725b.png",
     "tags": ["architecture", "urban", "cityscape", "modern"],
     "metadata": {
       "width": 3840,
@@ -21,10 +21,10 @@
       "file_size": 10485760,
       "file_size_mb": 10.0
     },
-    "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71725b.jpg"
+    "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71725b.png"
   },
-  "pic71725c.jpg": {
-    "filename": "pic71725c.jpg",
+  "pic71725c.png": {
+    "filename": "pic71725c.png",
     "tags": ["ocean", "waves", "seascape", "blue"],
     "metadata": {
       "width": 3000,
@@ -33,10 +33,10 @@
       "file_size": 5347737,
       "file_size_mb": 5.1
     },
-    "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71725c.jpg"
+    "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71725c.png"
   },
-  "pic71825.jpg": {
-    "filename": "pic71825.jpg",
+  "pic71825.png": {
+    "filename": "pic71825.png",
     "tags": ["forest", "nature", "trees", "green"],
     "metadata": {
       "width": 4000,
@@ -45,10 +45,10 @@
       "file_size": 15728640,
       "file_size_mb": 15.0
     },
-    "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71825.jpg"
+    "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71825.png"
   },
-  "pic71825a.jpg": {
-    "filename": "pic71825a.jpg",
+  "pic71825a.png": {
+    "filename": "pic71825a.png",
     "tags": ["sunset", "sky", "colors", "warm"],
     "metadata": {
       "width": 3500,
@@ -57,10 +57,10 @@
       "file_size": 11534336,
       "file_size_mb": 11.0
     },
-    "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71825a.jpg"
+    "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71825a.png"
   },
-  "pic71825b.jpg": {
-    "filename": "pic71825b.jpg",
+  "pic71825b.png": {
+    "filename": "pic71825b.png",
     "tags": ["mountain", "peak", "landscape", "dramatic"],
     "metadata": {
       "width": 3200,
@@ -69,6 +69,6 @@
       "file_size": 8283750,
       "file_size_mb": 7.9
     },
-    "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71825b.jpg"
+    "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71825b.png"
   }
 }
