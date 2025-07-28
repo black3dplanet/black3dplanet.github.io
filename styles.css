@@ -13,19 +13,20 @@ body {
 
 /* Black3DPlanet Title Styles */
 .title-3d {
-    font-family: 'Baumans', 'Arial Black', 'Helvetica Bold', sans-serif;
+    font-family: 'Baumans', 'Arial Black', 'Helvetica Bold', 'Arial', sans-serif !important;
     color: #87CEEB !important;
     text-shadow: 
         2px 2px 0px #34495e,
         4px 4px 0px #7f8c8d,
         6px 6px 0px #bdc3c7,
         8px 8px 0px #ecf0f1,
-        0px 0px 20px rgba(44, 62, 80, 0.3);
-    transform: perspective(500px) rotateX(10deg);
-    transform-style: preserve-3d;
-    letter-spacing: 2px;
-    font-weight: 900;
-    transition: all 0.3s ease;
+        0px 0px 20px rgba(44, 62, 80, 0.3) !important;
+    transform: perspective(500px) rotateX(10deg) !important;
+    transform-style: preserve-3d !important;
+    letter-spacing: 2px !important;
+    font-weight: 900 !important;
+    transition: all 0.3s ease !important;
+    font-size: 3.75rem !important; /* Ensure base size is set */
 }
 
 .neon-text {
