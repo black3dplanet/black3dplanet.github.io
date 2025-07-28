@@ -408,13 +408,12 @@ body {
 @media (max-width: 768px) {
 
     .image-container {
-        height: auto;
+        width: 100%;
     }
 
     .image-container img {
-        width: 50%;  /* or any appropriate value */
+        max-width: 100%;
         height: auto;
-        object-fit: contain;
     }
 
     .footer-content {
