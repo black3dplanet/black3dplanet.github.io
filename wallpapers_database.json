@@ -1,7 +1,7 @@
 {
   "pic71725.png": {
     "filename": "pic71725.png",
-    "tags": ["landscape", "nature", "high-resolution", "beautiful"],
+    "tags": ["afrofuturism", "headsup","Black","woman", "beautiful","database"],
     "metadata": {
       "width": 4000,
       "height": 3000,
@@ -13,7 +13,7 @@
   },
   "pic71725b.png": {
     "filename": "pic71725b.png",
-    "tags": ["architecture", "urban", "cityscape", "modern"],
+    "tags": ["afrofuturism","Black","woman", "presenting", "audience","convention"],
     "metadata": {
       "width": 3840,
       "height": 2160,
@@ -25,7 +25,7 @@
   },
   "pic71725c.png": {
     "filename": "pic71725c.png",
-    "tags": ["ocean", "waves", "seascape", "blue"],
+    "tags": ["afrofuturism", "Black","woman","robot","factory"],
     "metadata": {
       "width": 3000,
       "height": 2000,
@@ -37,7 +37,7 @@
   },
   "pic71825.png": {
     "filename": "pic71825.png",
-    "tags": ["forest", "nature", "trees", "green"],
+    "tags": ["afrofuturism", "3dvisor", "Black","woman","convention"],
     "metadata": {
       "width": 4000,
       "height": 3000,
@@ -49,7 +49,7 @@
   },
   "pic71825a.png": {
     "filename": "pic71825a.png",
-    "tags": ["sunset", "sky", "colors", "warm"],
+    "tags": ["afrofuturism", "Black", "couple","man", "woman"],
     "metadata": {
       "width": 3500,
       "height": 2500,
@@ -61,7 +61,7 @@
   },
   "pic71825b.png": {
     "filename": "pic71825b.png",
-    "tags": ["mountain", "peak", "landscape", "dramatic"],
+    "tags": ["afrofuturism", "Black", "couple","man", "woman"],
     "metadata": {
       "width": 3200,
       "height": 2400,
@@ -70,5 +70,30 @@
       "file_size_mb": 7.9
     },
     "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71825b.png"
+  },
+   "pic71825c.png": {
+    "filename": "pic71825c.png",
+    "tags": ["afrofuturism", "Black", "woman", "visor", "cyber", "balcony"],
+    "metadata": {
+      "width": 3200,
+      "height": 2400,
+      "aspect_ratio": 1.33,
+      "file_size": 8283750,
+      "file_size_mb": 7.9
+    },
+    "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71825c.png"
+  },
+   "pic71825d.png": {
+    "filename": "pic71825d.png",
+    "tags": ["afrofuturism", "Black", "women","balcony", "neon"],
+    "metadata": {
+      "width": 3200,
+      "height": 2400,
+      "aspect_ratio": 1.33,
+      "file_size": 8283750,
+      "file_size_mb": 7.9
+    },
+    "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71825d.png"
   }
+  
 }
