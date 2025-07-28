@@ -261,6 +261,91 @@
                 transition-delay: 0.2s;
             }
         }
+
+        /* Articles Section Styles */
+        .articles-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+
+        .articles-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .articles-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .article-entry {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .article-entry:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .article-site {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-title {
+            font-weight: bold;
+            color: white;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: block;
+        }
+
+        .article-title:hover {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: underline;
+        }
+
+        /* Desktop Articles Layout */
+        @media (min-width: 769px) {
+            .articles-section {
+                position: relative;
+                margin-top: 3rem;
+            }
+        }
+
+        /* Mobile Articles Layout */
+        @media (max-width: 768px) {
+            .articles-section {
+                margin-top: 2rem;
+                padding: 1.5rem 0;
+            }
+
+            .articles-container {
+                padding: 0 1rem;
+            }
+
+            .articles-header {
+                font-size: 1.3rem;
+                margin-bottom: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -400,6 +485,16 @@
                 </div>
             </div>
         </div>
+
+        <!-- Articles Section -->
+        <div class="articles-section">
+            <div class="articles-header">
+                Latest Tech News
+            </div>
+            <div class="articles-container">
+                <div id="articles-list-mobile"></div>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -429,6 +524,7 @@
                 const expandedPanels = ref({})
                 const imageErrors = ref({})
                 const imageLoads = ref({})
+                const articles = ref([])
 
                 // Helper functions
                 const getFilenameWithoutExtension = (filename) => {
@@ -690,6 +786,7 @@
                     sortedWallpapers,
                     imageErrors,
                     imageLoads,
+                    articles,
                     getFilenameWithoutExtension,
                     getFileExtension,
                     handleImageError,
@@ -703,6 +800,87 @@
                 }
             }
         }).mount('#app')
+    </script>
+
+    <script>
+        // Load and display articles from JSON file for mobile
+        fetch('articlelist1.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                const articlesList = document.getElementById('articles-list-mobile');
+                
+                data.forEach(article => {
+                    const articleEntry = document.createElement('div');
+                    articleEntry.className = 'article-entry';
+                    
+                    const siteSpan = document.createElement('span');
+                    siteSpan.className = 'article-site';
+                    siteSpan.textContent = article.site + ' : ';
+                    
+                    const titleLink = document.createElement('a');
+                    titleLink.className = 'article-title';
+                    titleLink.href = article.link;
+                    titleLink.target = '_blank';
+                    titleLink.textContent = article.title;
+                    
+                    articleEntry.appendChild(siteSpan);
+                    articleEntry.appendChild(titleLink);
+                    articlesList.appendChild(articleEntry);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading articles:', error);
+                
+                // Fallback: Create sample articles when JSON can't be loaded
+                const articlesList = document.getElementById('articles-list-mobile');
+                const fallbackArticles = [
+                    {
+                        site: "Tech News",
+                        title: "Sample Article 1 - Technology Trends",
+                        link: "#"
+                    },
+                    {
+                        site: "Science Daily",
+                        title: "Sample Article 2 - Scientific Discoveries",
+                        link: "#"
+                    },
+                    {
+                        site: "Business Insider",
+                        title: "Sample Article 3 - Business Insights",
+                        link: "#"
+                    }
+                ];
+                
+                fallbackArticles.forEach(article => {
+                    const articleEntry = document.createElement('div');
+                    articleEntry.className = 'article-entry';
+                    
+                    const siteSpan = document.createElement('span');
+                    siteSpan.className = 'article-site';
+                    siteSpan.textContent = article.site + ' : ';
+                    
+                    const titleLink = document.createElement('a');
+                    titleLink.className = 'article-title';
+                    titleLink.href = article.link;
+                    titleLink.target = '_blank';
+                    titleLink.textContent = article.title;
+                    
+                    articleEntry.appendChild(siteSpan);
+                    articleEntry.appendChild(titleLink);
+                    articlesList.appendChild(articleEntry);
+                });
+                
+                // Add a notice about the fallback
+                const notice = document.createElement('div');
+                notice.style.cssText = 'text-align: center; padding: 10px; color: rgba(255,255,255,0.8); font-size: 0.9rem;';
+                notice.textContent = 'Note: Using sample articles. To see real articles, serve this file through a web server.';
+                articlesList.appendChild(notice);
+            });
     </script>
 </body>
 </html>
