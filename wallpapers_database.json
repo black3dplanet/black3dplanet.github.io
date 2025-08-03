@@ -1,7 +1,8 @@
 {
   "pic71726b.png": {
     "filename": "pic71726b.png",
-    "tags": ["afrofuturism","Black","woman", "electric", "cars","factory"],
+    "tags": ["afrofuturism", "Black", "woman", "electric", "cars", "factory"],
+    "description": "Futuristic cars built in factory",
     "metadata": {
       "width": 3840,
       "height": 2160,
@@ -13,7 +14,8 @@
   },
   "pic71726c.png": {
     "filename": "pic71726c.png",
-    "tags": ["afrofuturism", "Black","woman","flying","electric", "plane"],
+    "tags": ["afrofuturism", "Black", "woman", "flying", "electric", "plane"],
+    "description": "Airborne travel through futuristic skies",
     "metadata": {
       "width": 3000,
       "height": 2000,
@@ -25,7 +27,8 @@
   },
   "pic71726d.png": {
     "filename": "pic71726d.png",
-    "tags": ["afrofuturism", "flying", "Black","woman","dashboard","digital"],
+    "tags": ["afrofuturism", "flying", "Black", "woman", "dashboard", "digital"],
+    "description": "Digital controls guiding airborne journey",
     "metadata": {
       "width": 4000,
       "height": 3000,
@@ -38,6 +41,7 @@
   "pic71726i.png": {
     "filename": "pic71726i.png",
     "tags": ["afrofuturism", "Black", "woman", "flying", "dashboard"],
+    "description": "Pilot navigates sleek command interface",
     "metadata": {
       "width": 3200,
       "height": 2400,
@@ -50,6 +54,7 @@
   "pic71726e.png": {
     "filename": "pic71726e.png",
     "tags": ["afrofuturism", "Black", "couple", "flying", "woman", "neon"],
+    "description": "Couple soaring through neon dreams",
     "metadata": {
       "width": 3500,
       "height": 2500,
@@ -62,6 +67,7 @@
   "pic71726s.png": {
     "filename": "pic71726s.png",
     "tags": ["afrofuturism", "Black", "man", "flying", "dashboard"],
+    "description": "Navigator steering futuristic airship interface",
     "metadata": {
       "width": 3200,
       "height": 2400,
@@ -71,9 +77,10 @@
     },
     "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71726s.png"
   },
-   "pic71925a.png": {
+  "pic71925a.png": {
     "filename": "pic71925a.png",
     "tags": ["afrofuturism", "Black", "woman", "motorcycler", "cyber"],
+    "description": "Cyber biker races neon streets",
     "metadata": {
       "width": 3200,
       "height": 2400,
@@ -85,7 +92,8 @@
   },
   "pic71725.png": {
     "filename": "pic71725.png",
-    "tags": ["afrofuturism", "headsup","Black","woman", "beautiful","database"],
+    "tags": ["afrofuturism", "headsup", "Black", "woman", "beautiful", "database"],
+    "description": "Visor interface reveals data beauty",
     "metadata": {
       "width": 4000,
       "height": 3000,
@@ -97,7 +105,8 @@
   },
   "pic71725b.png": {
     "filename": "pic71725b.png",
-    "tags": ["afrofuturism","Black","woman", "presenting", "audience","convention"],
+    "tags": ["afrofuturism", "Black", "woman", "presenting", "audience", "convention"],
+    "description": "Visionary leads future tech gathering",
     "metadata": {
       "width": 3840,
       "height": 2160,
@@ -109,7 +118,8 @@
   },
   "pic71725c.png": {
     "filename": "pic71725c.png",
-    "tags": ["afrofuturism", "Black","woman","robot","factory"],
+    "tags": ["afrofuturism", "Black", "woman", "robot", "factory"],
+    "description": "Machines assist assembly line engineer",
     "metadata": {
       "width": 3000,
       "height": 2000,
@@ -121,7 +131,8 @@
   },
   "pic71825.png": {
     "filename": "pic71825.png",
-    "tags": ["afrofuturism", "3dvisor", "Black","woman","convention"],
+    "tags": ["afrofuturism", "3dvisor", "Black", "woman", "convention"],
+    "description": "Wearing visor inside tech expo",
     "metadata": {
       "width": 4000,
       "height": 3000,
@@ -133,7 +144,8 @@
   },
   "pic71825a.png": {
     "filename": "pic71825a.png",
-    "tags": ["afrofuturism", "Black", "couple","man", "woman"],
+    "tags": ["afrofuturism", "Black", "couple", "man", "woman"],
+    "description": "Partners gaze into shared future",
     "metadata": {
       "width": 3500,
       "height": 2500,
@@ -145,7 +157,8 @@
   },
   "pic71825b.png": {
     "filename": "pic71825b.png",
-    "tags": ["afrofuturism", "Black", "couple","man", "woman"],
+    "tags": ["afrofuturism", "Black", "couple", "man", "woman"],
+    "description": "Unified couple in future setting",
     "metadata": {
       "width": 3200,
       "height": 2400,
@@ -155,9 +168,10 @@
     },
     "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71825b.png"
   },
-   "pic71825c.png": {
+  "pic71825c.png": {
     "filename": "pic71825c.png",
     "tags": ["afrofuturism", "Black", "woman", "visor", "cyber", "balcony"],
+    "description": "Cyber gaze across digital city",
     "metadata": {
       "width": 3200,
       "height": 2400,
@@ -167,9 +181,10 @@
     },
     "github_raw_url": "https://raw.githubusercontent.com/black3dplanet/black3dplanet.github.io/main/imgs/pic71825c.png"
   },
-   "pic71825d.png": {
+  "pic71825d.png": {
     "filename": "pic71825d.png",
-    "tags": ["afrofuturism", "Black", "women","balcony", "neon"],
+    "tags": ["afrofuturism", "Black", "women", "balcony", "neon"],
+    "description": "Women stand beneath neon skyline",
     "metadata": {
       "width": 3200,
       "height": 2400,
@@ -181,7 +196,8 @@
   },
   "pic71726.png": {
     "filename": "pic71726.png",
-    "tags": ["afrofuturism", "Black","woman", "beautiful","space-suit"],
+    "tags": ["afrofuturism", "Black", "woman", "beautiful", "space-suit"],
+    "description": "Elegant astronaut in future suit",
     "metadata": {
       "width": 4000,
       "height": 3000,

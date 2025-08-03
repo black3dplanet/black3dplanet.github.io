@@ -58,15 +58,16 @@ body {
 }
 
 .info-panel {
-    transition: max-height 0.3s ease, opacity 0.3s ease;
     max-height: 0;
-    opacity: 0;
     overflow: hidden;
+    transition: max-height 0.3s ease;
+    opacity: 0;
 }
 
 .info-panel.expanded {
-    max-height: 500px;
+    max-height: 300px;
     opacity: 1;
+    margin-top: 1rem;
 }
 
 .selected-preview {
@@ -89,6 +90,8 @@ body {
     padding: 1rem;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .wallpaper-list-item:hover {
@@ -469,18 +472,20 @@ body {
     text-decoration: none;
 }
 
+.social-link span {
+    display: none !important;
+}
+
 .instagram-icon,
-.twitter-icon,
-.social-icon {
+.twitter-icon {
     width: 20px;
     height: 20px;
-    transition: transform 0.3s ease;
     object-fit: contain;
+    transition: transform 0.3s ease;
 }
 
 .social-link:hover .instagram-icon,
-.social-link:hover .twitter-icon,
-.social-link:hover .social-icon {
+.social-link:hover .twitter-icon {
     transform: scale(1.1);
 }
 
@@ -499,40 +504,30 @@ body {
 
     .footer-content {
         flex-direction: column;
+        gap: 1rem;
         text-align: center;
-        gap: 1.5rem;
     }
 
     .footer-text {
-        font-size: 0.8rem;
+        order: 2;
     }
 
     .footer-social {
-        gap: 0.75rem;
-        flex-wrap: wrap;
-        justify-content: center;
+        order: 1;
     }
 
     .social-link {
-        font-size: 0.85rem;
-        padding: 0.75rem 1.5rem;
-    }
-
-    .social-link span {
-        display: none; /* Hide text labels on mobile */
+        justify-content: center;
     }
 
     .instagram-icon,
-    .twitter-icon,
-    .social-icon {
-        width: 14px;
-        height: 14px;
+    .twitter-icon {
+        width: 16px;
+        height: 16px;
     }
-    
-    /* Mobile download button adjustments */
+
     .download-button {
-        font-size: 0.7rem;
-        padding: 6px 12px;
-        min-width: 50px;
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
     }
 } 
