@@ -153,65 +153,67 @@
 
             <!-- Main Preview Panel -->
             <div class="main-panel min-h-screen p-4">
-                <div class="image-grid">
-                    <div v-for="wallpaper in wallpapers" 
-                         :key="wallpaper.filename"
-                         class="wallpaper-card"
-                         :class="{'selected-preview': selectedWallpaper?.filename === wallpaper.filename}"
-                         :id="'preview-' + wallpaper.filename"
-                         @click="selectWallpaperFromPreview(wallpaper)">
-                        <div class="image-container">
-                            <img :src="wallpaper.github_raw_url" 
-                                 :alt="getFilenameWithoutExtension(wallpaper.filename)"
-                                 class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
-                                 loading="lazy"
-                                 @error="handleImageError"
-                                 @load="handleImageLoad">
-                            
-                            <!-- Loading State -->
-                            <div v-if="!imageLoads[wallpaper.filename] && !imageErrors[wallpaper.filename]" class="image-loading">
-                                <div>Loading...</div>
-                            </div>
-                            
-                            <!-- Error State -->
-                            <div v-if="imageErrors[wallpaper.filename]" class="image-error">
-                                <div>
-                                    <div class="text-lg mb-2">⚠️</div>
-                                    <div>Image failed to load</div>
-                                    <div class="text-xs mt-1">{{ getFilenameWithoutExtension(wallpaper.filename) }}</div>
-                                    <div class="text-xs mt-1 text-red-500">{{ wallpaper.github_raw_url }}</div>
+                <div class="image-grid-container">
+                    <div class="image-grid">
+                        <div v-for="wallpaper in wallpapers" 
+                             :key="wallpaper.filename"
+                             class="wallpaper-card"
+                             :class="{'selected-preview': selectedWallpaper?.filename === wallpaper.filename}"
+                             :id="'preview-' + wallpaper.filename"
+                             @click="selectWallpaperFromPreview(wallpaper)">
+                            <div class="image-container">
+                                <img :src="wallpaper.github_raw_url" 
+                                     :alt="getFilenameWithoutExtension(wallpaper.filename)"
+                                     class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                                     loading="lazy"
+                                     @error="handleImageError"
+                                     @load="handleImageLoad">
+                                
+                                <!-- Loading State -->
+                                <div v-if="!imageLoads[wallpaper.filename] && !imageErrors[wallpaper.filename]" class="image-loading">
+                                    <div>Loading...</div>
+                                </div>
+                                
+                                <!-- Error State -->
+                                <div v-if="imageErrors[wallpaper.filename]" class="image-error">
+                                    <div>
+                                        <div class="text-lg mb-2">⚠️</div>
+                                        <div>Image failed to load</div>
+                                        <div class="text-xs mt-1">{{ getFilenameWithoutExtension(wallpaper.filename) }}</div>
+                                        <div class="text-xs mt-1 text-red-500">{{ wallpaper.github_raw_url }}</div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="download-button-container">
-                            <button class="download-button" @click="downloadImage(wallpaper.filename)">
-                                &nbsp;&nbsp;Download
-                            </button>
-                        </div>
+                            <div class="download-button-container">
+                                <button class="download-button" @click="downloadImage(wallpaper.filename)">
+                                    &nbsp;&nbsp;Download
+                                </button>
+                            </div>
 
-                        <!-- Mobile Info Panel -->
-                        <div :class="['mobile-info-panel', {'expanded': selectedWallpaper?.filename === wallpaper.filename}]">
-                            <div class="mobile-info-content">
-                                <div class="text-sm text-gray-600">
-                                    <h3 class="font-bold text-gray-800 text-lg mb-2">
-                                        {{ wallpaper.description }}
-                                    </h3>
-                                    <div class="mb-2">
-                                        Tags: {{ wallpaper.tags.join(', ') }}
+                            <!-- Mobile Info Panel -->
+                            <div :class="['mobile-info-panel', {'expanded': selectedWallpaper?.filename === wallpaper.filename}]">
+                                <div class="mobile-info-content">
+                                    <div class="text-sm text-gray-600">
+                                        <h3 class="font-bold text-gray-800 text-lg mb-2">
+                                            {{ wallpaper.description }}
+                                        </h3>
+                                        <div class="mb-2">
+                                            Tags: {{ wallpaper.tags.join(', ') }}
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-2">
+                                            <div>Resolution:</div>
+                                            <div>{{ wallpaper.metadata.width }}x{{ wallpaper.metadata.height }}</div>
+                                            <div>File Size:</div>
+                                            <div>{{ wallpaper.metadata.file_size_mb }}MB</div>
+                                            <div>File Type:</div>
+                                            <div>{{ getFileExtension(wallpaper.filename) }}</div>
+                                        </div>
+                                        <a :href="wallpaper.github_raw_url" 
+                                           target="_blank"
+                                           class="block mt-4 text-center p-2 rounded-lg border border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-white transition-colors duration-200">
+                                            Download Wallpaper
+                                        </a>
                                     </div>
-                                    <div class="grid grid-cols-2 gap-2">
-                                        <div>Resolution:</div>
-                                        <div>{{ wallpaper.metadata.width }}x{{ wallpaper.metadata.height }}</div>
-                                        <div>File Size:</div>
-                                        <div>{{ wallpaper.metadata.file_size_mb }}MB</div>
-                                        <div>File Type:</div>
-                                        <div>{{ getFileExtension(wallpaper.filename) }}</div>
-                                    </div>
-                                    <a :href="wallpaper.github_raw_url" 
-                                       target="_blank"
-                                       class="block mt-4 text-center p-2 rounded-lg border border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-white transition-colors duration-200">
-                                        Download Wallpaper
-                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -226,7 +228,7 @@
                 <!-- First Article Section -->
                 <div class="article-section-left">
                     <div class="articles-header">
-                    Latest Tech News
+                    Latest Tech Newes
                     </div>
                     <div id="articles-list-mobile"></div>
                 </div>
@@ -502,7 +504,7 @@
                         await nextTick();
                         const listElement = document.getElementById('list-' + wallpaper.filename);
                         if (listElement) {
-                            // Position the selected item 7 items down from the top
+                            // Position the selected item as the 3rd item from the top
                             const sidePanel = document.querySelector('.side-panel');
                             if (sidePanel) {
                                 // Get all list items to calculate average height
@@ -512,14 +514,14 @@
                                     const itemHeight = firstItem.offsetHeight;
                                     const marginBottom = 16; // 1rem margin-bottom from CSS
                                     const totalItemHeight = itemHeight + marginBottom;
-                                    const targetPosition = totalItemHeight * 7; // 7 items down
+                                    const targetPosition = totalItemHeight * 2; // 3rd position (0-based index: 0,1,2)
                                     
                                     // Calculate the position relative to the side panel
                                     const elementRect = listElement.getBoundingClientRect();
                                     const panelRect = sidePanel.getBoundingClientRect();
                                     const relativeTop = elementRect.top - panelRect.top;
                                     
-                                    // Calculate the scroll position to place the element 7 items down
+                                    // Calculate the scroll position to place the element as 3rd item
                                     const scrollTop = sidePanel.scrollTop + relativeTop - targetPosition;
                                     
                                     console.log('Scroll calculation:', {
@@ -557,7 +559,7 @@
                     if (!isMobile()) {
                         const listElement = document.getElementById('list-' + wallpaper.filename)
                         if (listElement) {
-                            // Position the selected item 7 items down from the top
+                            // Position the selected item as the 3rd item from the top
                             const sidePanel = document.querySelector('.side-panel');
                             if (sidePanel) {
                                 // Get all list items to calculate average height
@@ -567,14 +569,14 @@
                                     const itemHeight = firstItem.offsetHeight;
                                     const marginBottom = 16; // 1rem margin-bottom from CSS
                                     const totalItemHeight = itemHeight + marginBottom;
-                                    const targetPosition = totalItemHeight * 7; // 7 items down
+                                    const targetPosition = totalItemHeight * 2; // 3rd position (0-based index: 0,1,2)
                                     
                                     // Calculate the position relative to the side panel
                                     const elementRect = listElement.getBoundingClientRect();
                                     const panelRect = sidePanel.getBoundingClientRect();
                                     const relativeTop = elementRect.top - panelRect.top;
                                     
-                                    // Calculate the scroll position to place the element 7 items down
+                                    // Calculate the scroll position to place the element as 3rd item
                                     const scrollTop = sidePanel.scrollTop + relativeTop - targetPosition;
                                     
                                     console.log('Search scroll calculation:', {
