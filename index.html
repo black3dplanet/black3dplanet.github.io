@@ -228,7 +228,7 @@
                 <!-- First Article Section -->
                 <div class="article-section-left">
                     <div class="articles-header">
-                    Latest Tech Newes
+                    Latest Tech News
                     </div>
                     <div id="articles-list-mobile"></div>
                 </div>
@@ -236,7 +236,7 @@
                 <!-- Second Article Section -->
                 <div class="article-section-right">
                     <div class="articles-header">
-                    Latest A.I. News
+                    A.I. Coding Assistants and Tools
                     </div>
                     <div id="articles-list-mobile-2"></div>
                 </div>
@@ -246,7 +246,7 @@
             <div class="articles-container-third">
                 <div class="article-section-third">
                     <div class="articles-header">
-                        A.I. Coding Assistants and Tools
+                        Latest A.I. News
                     </div>
                     <div id="articles-list-mobile-3"></div>
                 </div>
@@ -675,7 +675,7 @@
             const articlesList2 = document.getElementById('articles-list-mobile-2');
             const articlesList3 = document.getElementById('articles-list-mobile-3');
             
-            // Load articles for first section
+            // Load tech news for first section (Latest Tech News)
             data1.forEach(article => {
                 const articleEntry = document.createElement('div');
                 articleEntry.className = 'article-entry';
@@ -695,28 +695,8 @@
                 articlesList.appendChild(articleEntry);
             });
             
-            // Load articles for second section
-            data2.forEach(article => {
-                const articleEntry = document.createElement('div');
-                articleEntry.className = 'article-entry';
-                
-                const siteSpan = document.createElement('span');
-                siteSpan.className = 'article-site';
-                siteSpan.textContent = article.site + ' : '; 
-                
-                const titleLink = document.createElement('a');
-                titleLink.className = 'article-title';
-                titleLink.href = article.link;
-                titleLink.target = '_blank';
-                titleLink.textContent = article.title;
-                
-                articleEntry.appendChild(siteSpan);
-                articleEntry.appendChild(titleLink);
-                articlesList2.appendChild(articleEntry);
-            });
-            
-            // Load tools for third section
-            console.log('Loading tools for third section...');
+            // Load tools for second section (A.I. Coding Assistants and Tools)
+            console.log('Loading tools for second section...');
             data3.forEach((tool, index) => {
                 console.log(`Tool ${index + 1}:`, tool);
                 console.log(`Tool site:`, tool.site);
@@ -743,8 +723,28 @@
                 toolEntry.appendChild(siteSpan);
                 toolEntry.appendChild(titleLink);
                 toolEntry.appendChild(descriptionDiv);
-                articlesList3.appendChild(toolEntry);
-                console.log(`Added tool ${index + 1} to third section`);
+                articlesList2.appendChild(toolEntry);
+                console.log(`Added tool ${index + 1} to second section`);
+            });
+            
+            // Load AI news for third section (Latest A.I. News)
+            data2.forEach(article => {
+                const articleEntry = document.createElement('div');
+                articleEntry.className = 'article-entry';
+                
+                const siteSpan = document.createElement('span');
+                siteSpan.className = 'article-site';
+                siteSpan.textContent = article.site + ' : '; 
+                
+                const titleLink = document.createElement('a');
+                titleLink.className = 'article-title';
+                titleLink.href = article.link;
+                titleLink.target = '_blank';
+                titleLink.textContent = article.title;
+                
+                articleEntry.appendChild(siteSpan);
+                articleEntry.appendChild(titleLink);
+                articlesList3.appendChild(articleEntry);
             });
         })
         .catch(error => {
@@ -755,21 +755,21 @@
             const articlesList2 = document.getElementById('articles-list-mobile-2');
             const articlesList3 = document.getElementById('articles-list-mobile-3');
             
-            const fallbackArticles1 = [
+            const fallbackTools = [
                 {
-                    site: "Tech News",
-                    title: "Sample Article 1 - Technology Trends",
-                    link: "#"
+                    site: "Sample Tool 1",
+                    link: "#",
+                    article: "This is a sample tool description for demonstration purposes."
                 },
                 {
-                    site: "Science Daily",
-                    title: "Sample Article 2 - Scientific Discoveries",
-                    link: "#"
+                    site: "Sample Tool 2", 
+                    link: "#",
+                    article: "Another sample tool with a different description."
                 },
                 {
-                    site: "Business Insider",
-                    title: "Sample Article 3 - Business Insights",
-                    link: "#"
+                    site: "Sample Tool 3",
+                    link: "#", 
+                    article: "A third sample tool to show the layout."
                 }
             ];
             
@@ -791,7 +791,25 @@
                 }
             ];
             
-            // Load fallback articles for first section
+            const fallbackArticles1 = [
+                {
+                    site: "Tech News",
+                    title: "Sample Article 1 - Technology Trends",
+                    link: "#"
+                },
+                {
+                    site: "Science Daily",
+                    title: "Sample Article 2 - Scientific Discoveries",
+                    link: "#"
+                },
+                {
+                    site: "Business Insider",
+                    title: "Sample Article 3 - Business Insights",
+                    link: "#"
+                }
+            ];
+            
+            // Load fallback tech articles for first section (Latest Tech News)
             fallbackArticles1.forEach(article => {
                 const articleEntry = document.createElement('div');
                 articleEntry.className = 'article-entry';
@@ -811,45 +829,7 @@
                 articlesList.appendChild(articleEntry);
             });
             
-            // Load fallback articles for second section
-            fallbackArticles2.forEach(article => {
-                const articleEntry = document.createElement('div');
-                articleEntry.className = 'article-entry';
-                
-                const siteSpan = document.createElement('span');
-                siteSpan.className = 'article-site';
-                siteSpan.textContent = article.site + ' : ';
-                
-                const titleLink = document.createElement('a');
-                titleLink.className = 'article-title';
-                titleLink.href = article.link;
-                titleLink.target = '_blank';
-                titleLink.textContent = article.title;
-                
-                articleEntry.appendChild(siteSpan);
-                articleEntry.appendChild(titleLink);
-                articlesList2.appendChild(articleEntry);
-            });
-            
-            // Load fallback tools for third section
-            const fallbackTools = [
-                {
-                    site: "Sample Tool 1",
-                    link: "#",
-                    article: "This is a sample tool description for demonstration purposes."
-                },
-                {
-                    site: "Sample Tool 2", 
-                    link: "#",
-                    article: "Another sample tool with a different description."
-                },
-                {
-                    site: "Sample Tool 3",
-                    link: "#", 
-                    article: "A third sample tool to show the layout."
-                }
-            ];
-            
+            // Load fallback tools for second section (A.I. Coding Assistants and Tools)
             fallbackTools.forEach(tool => {
                 const toolEntry = document.createElement('div');
                 toolEntry.className = 'article-entry';
@@ -871,23 +851,43 @@
                 toolEntry.appendChild(siteSpan);
                 toolEntry.appendChild(titleLink);
                 toolEntry.appendChild(descriptionDiv);
-                articlesList3.appendChild(toolEntry);
+                articlesList2.appendChild(toolEntry);
+            });
+            
+            // Load fallback AI articles for third section (Latest A.I. News)
+            fallbackArticles2.forEach(article => {
+                const articleEntry = document.createElement('div');
+                articleEntry.className = 'article-entry';
+                
+                const siteSpan = document.createElement('span');
+                siteSpan.className = 'article-site';
+                siteSpan.textContent = article.site + ' : ';
+                
+                const titleLink = document.createElement('a');
+                titleLink.className = 'article-title';
+                titleLink.href = article.link;
+                titleLink.target = '_blank';
+                titleLink.textContent = article.title;
+                
+                articleEntry.appendChild(siteSpan);
+                articleEntry.appendChild(titleLink);
+                articlesList3.appendChild(articleEntry);
             });
             
             // Add a notice about the fallback
             const notice1 = document.createElement('div');
             notice1.style.cssText = 'text-align: center; padding: 10px; color: rgba(255,255,255,0.8); font-size: 0.9rem;';
-            notice1.textContent = 'Note: Using sample articles. To see real articles, serve this file through a web server.';
+            notice1.textContent = 'Note: Using sample tech articles. To see real articles, serve this file through a web server.';
             articlesList.appendChild(notice1);
             
             const notice2 = document.createElement('div');
             notice2.style.cssText = 'text-align: center; padding: 10px; color: rgba(255,255,255,0.8); font-size: 0.9rem;';
-            notice2.textContent = 'Note: Using sample AI articles. To see real articles, serve this file through a web server.';
+            notice2.textContent = 'Note: Using sample tools. To see real tools, serve this file through a web server.';
             articlesList2.appendChild(notice2);
             
             const notice3 = document.createElement('div');
             notice3.style.cssText = 'text-align: center; padding: 10px; color: rgba(255,255,255,0.8); font-size: 0.9rem;';
-            notice3.textContent = 'Note: Using sample tools. To see real tools, serve this file through a web server.';
+            notice3.textContent = 'Note: Using sample tech articles. To see real articles, serve this file through a web server.';
             articlesList3.appendChild(notice3);
         });
     </script>
