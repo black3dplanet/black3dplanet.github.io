@@ -35,11 +35,44 @@ body {
     scroll-behavior: smooth;
 }
 
+/* Image Grid Card Container */
+.image-grid-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    max-height: 800px; /* Height for approximately 4 images */
+    overflow-y: auto;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom scrollbar for image grid container */
+.image-grid-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.image-grid-container::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.image-grid-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.image-grid-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Update image grid to work within the card */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 2.875rem;
-    padding: 1rem;
+    padding: 0;
 }
 
 .wallpaper-card {
@@ -236,13 +269,19 @@ body {
     .main-panel {
         margin-left: 0 !important;
         width: 100% !important;
-        padding-top: 7.8rem !important; /* Increased by 80px to match desktop */
+        padding-top: 8.8rem !important; /* Increased by 80px to match desktop */
+    }
+    
+    .image-grid-container {
+        max-height: 600px; /* Smaller height for mobile */
+        padding: 1rem;
+        margin: 1rem 0;
     }
     
     .image-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2.875rem;
-        padding: 0.5rem;
+        padding: 0;
     }
 
     /* Mobile title size reduction */
@@ -311,6 +350,13 @@ body {
 .article-section-right {
     display: flex;
     flex-direction: column;
+    width: 97%;
+    max-height: 400px !important;
+    overflow-y: auto !important;
+    padding-left: 12px;
+    padding-right: 12px;
+    /* Debug: ensure scrollable */
+    min-height: 200px;
 }
 
 .articles-container-third {
@@ -328,21 +374,29 @@ body {
     padding-right: 10px;
 }
 
-/* Custom scrollbar for the third section */
+/* Custom scrollbar for all article sections */
+.article-section-left::-webkit-scrollbar,
+.article-section-right::-webkit-scrollbar,
 .article-section-third::-webkit-scrollbar {
     width: 8px;
 }
 
+.article-section-left::-webkit-scrollbar-track,
+.article-section-right::-webkit-scrollbar-track,
 .article-section-third::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
 }
 
+.article-section-left::-webkit-scrollbar-thumb,
+.article-section-right::-webkit-scrollbar-thumb,
 .article-section-third::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.3);
     border-radius: 4px;
 }
 
+.article-section-left::-webkit-scrollbar-thumb:hover,
+.article-section-right::-webkit-scrollbar-thumb:hover,
 .article-section-third::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.5);
 }
@@ -396,9 +450,32 @@ body {
 
 
 
-/* Mobile Articles Layout 
-@media (max-width: 768px) */
+/* Mobile Articles Layout */
+@media (max-width: 768px) {
+    .articles-section {
+        margin-top: 2rem;
+        padding: 1.5rem 0;
+    }
 
+    .articles-container {
+        padding: 0 1rem;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .articles-header {
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Ensure scrollable properties work on mobile */
+    .article-section-left,
+    .article-section-right,
+    .article-section-third {
+        max-height: 300px !important;
+        overflow-y: auto !important;
+    }
+}
 
 @media only screen and (max-device-width: 480px) {
     .articles-section {
@@ -415,6 +492,14 @@ body {
     .articles-header {
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
+    }
+    
+    /* Ensure scrollable properties work on small mobile */
+    .article-section-left,
+    .article-section-right,
+    .article-section-third {
+        max-height: 250px !important;
+        overflow-y: auto !important;
     }
 }
 
