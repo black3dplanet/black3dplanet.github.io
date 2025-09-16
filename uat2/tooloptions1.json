@@ -1,0 +1,97 @@
+[
+  {
+    "site": "v0 - vercel",
+    "link": "https://v0.dev/",
+    "article": "Ship quickly with user interface source code, clone existing interfaces, AI-powered customization."
+  },
+  {
+    "site": "Windsurf AI IDE",
+    "link": "https://windsurf.com",
+    "article": "Intelligent IDE combining AI agents and intuitive co-pilots for coding efficiency."
+  },
+  {
+    "site": "Claude",
+    "link": "https://claude.ai",
+    "article": "A next generation AI assistant built by Anthropic."
+  },
+  {
+    "site": "Cursor",
+    "link": "https://cursor.so/",
+    "article": "Enhances VS Code with AI that understands, improves, and writes code."
+  },
+  {
+    "site": "Lovable",
+    "link": "https://lovable.dev",
+    "article": "Transforms ideas into apps instantly, using natural language; AI-powered, code ownership guaranteed."
+  },
+  {
+    "site": "Github Copilot",
+    "link": "https://github.com/features/copilot",
+    "article": "Coding assistant designed to supercharge your productivity and improve your workflow."
+  },
+  {
+    "site": "Firebase Studio",
+    "link": "https://firebase.studio/",
+    "article": "Accelerates your development with AI agents, builds backends, front ends, and mobile apps."
+  },
+  {
+    "site": "Cline",
+    "link": "https://cline.bot/",
+    "article": "Collaborative AI partner that's open source, fully extensible, and improves developer impact."
+  },
+  {
+    "site": "Aider",
+    "link": "https://aider.chat/",
+    "article": "Lets you pair program with your selected LLM for a new project or build on your existing codebase."
+  },
+  {
+    "site": "Trae",
+    "link": "https://www.trae.ai/",
+    "article": "AI-powered IDE offering real-time assistance, smart code generation, and productivity."
+  },
+  {
+    "site": "Kiro",
+    "link": "https://kiro.dev",
+    "article": "An agentic, spec-driven AI IDE that transforms prompts into structured specs, tasks, and code. "
+  },
+  {
+    "site": "Replit Agent",
+    "link": "https://replit.com",
+    "article": "AI assistant for the collaborative browser-based IDE, empowering coding with smart assistance."
+  },
+  {
+    "site": "AWS App Studio",
+    "link": "https://aws.amazon.com/appstudio/",
+    "article": "Generative-AI low-code platform for secure enterprise-grade app creation."
+  },
+  {
+    "site": "Adobe Firefly",
+    "link": "https://www.adobe.com/firefly",
+    "article": "Adobe's creative AI generates images, text effects, and more within creative workflows easily."
+  },
+  {
+    "site": "DALL-E 3",
+    "link": "https://openai.com/dall-e-3",
+    "article": "OpenAI's AI system creating realistic images from text articles with improved detail control."
+  },
+  {
+    "site": "Midjourney",
+    "link": "https://www.midjourney.com",
+    "article": "AI art generator crafting unique images from text prompts in a Discord community."
+  },
+  {
+    "site": "Recraft V3",
+    "link": "https://www.recraft.ai",
+    "article": "AI vector art generator for easily creating and editing scalable graphics quickly online."
+  },
+  {
+    "site": "Stable Diffusion",
+    "link": "https://stability.ai",
+    "article": "Open-source AI model generating detailed images from text with community customization easily."
+  },
+  {
+    "site": "Canva AI",
+    "link": "https://www.canva.com/ai-image-generator",
+    "article": "Tool integrated within Canva, generating images from text prompts for design projects easily."
+  }
+]

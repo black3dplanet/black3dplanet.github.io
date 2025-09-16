@@ -1,0 +1,37 @@
+[
+  {
+    "site": "InfoWorld",
+    "title": "MCP C# SDK updated to support latest Model Context Protocol spec",
+    "link": "https://www.infoworld.com/article/4027591/mcp-c-sdk-updated-to-support-latest-model-context‑protocol‑spec.html"
+  },
+  {
+    "site": "Google Developers Blog",
+    "title": "The agentic experience: Is MCP the right tool for your AI future?",
+    "link": "https://developers.googleblog.com/en/the-agentic-experience-is-mcp-the-right-tool-for-your-ai-future/"
+  },
+  {
+    "site": "Denodo Blog",
+    "title": "Denodo Ushers in the Age of Agentic AI with MCP Server Support",
+    "link": "https://www.datamanagementblog.com/denodo-ushers-in-the-age-of-agentic-ai-with-mcp-server-support/"
+  },
+  {
+    "site": "MarkTechPost",
+    "title": "7 MCP Server Best Practices for Scalable AI Integrations in 2025",
+    "link": "https://www.marktechpost.com/2025/07/23/7-mcp-server-best-practices-for-scalable-ai-integrations-in-2025/"
+  },
+  {
+    "site": "Poggio RevOps Blog",
+    "title": "The RevOps revolution: how context engineering with MCP transforms customer engagement",
+    "link": "https://www.poggio.io/post/revops-context-engineering-with-mcp"
+  },
+  {
+    "site": "Rearc Blog",
+    "title": "Model Context Protocol (MCP) Bridge for AI",
+    "link": "https://www.rearc.io/blog/model-context-protocol-mcp-bridge-for-ai"
+  },
+  {
+    "site": "Red Hat Blog",
+    "title": "Model Context Protocol (MCP): Understanding security risks and controls",
+    "link": "https://www.redhat.com/en/blog/model-context-protocol-mcp-understanding-security-risks-and-controls"
+  }
+]
