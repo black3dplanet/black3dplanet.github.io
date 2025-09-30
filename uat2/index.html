@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FJKLEDRFFJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FJKLEDRFFJ');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black3DPlanet</title>
+    
+    <!-- Vue.js with fallback -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" 
+            onerror="console.error('Failed to load Vue.js from unpkg')"
+            onload="console.log('Vue.js loaded successfully')"></script>
+    
+    <!-- Tailwind CSS with fallback -->
+    <script src="https://cdn.tailwindcss.com" 
+            onerror="console.error('Failed to load Tailwind CSS')"
+            onload="console.log('Tailwind CSS loaded successfully')"></script>
+    
+    <!-- Fallback for Vue.js if unpkg fails -->
+    <script>
+        if (typeof Vue === 'undefined') {
+            console.error('Vue.js not loaded, trying alternative CDN');
+            const script = document.createElement('script');
+            script.src = 'https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js';
+            script.onload = () => console.log('Vue.js loaded from jsdelivr');
+            script.onerror = () => console.error('Failed to load Vue.js from jsdelivr');
+            document.head.appendChild(script);
+        }
+    </script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts - Baumans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&display=swap" rel="stylesheet">
+    
+    <!-- Black3DPlanet Title Styles -->
+    <style>
+        .title-3d {
+            font-family: 'Baumans', 'Arial Black', 'Helvetica Bold', 'Arial', sans-serif !important;
+            color: #87CEEB !important;
+            text-shadow: 
+                2px 2px 0px #34495e,
+                4px 4px 0px #7f8c8d,
+                6px 6px 0px #bdc3c7,
+                8px 8px 0px #ecf0f1,
+                0px 0px 20px rgba(44, 62, 80, 0.3) !important;
+            transform: perspective(500px) rotateX(10deg) !important;
+            transform-style: preserve-3d !important;
+            letter-spacing: 2px !important;
+            font-weight: 900 !important;
+            transition: all 0.3s ease !important;
+            font-size: 3.75rem !important;
+        }
+        
+        /* Mobile responsive for Black3DPlanet title */
+        @media (max-width: 768px) {
+            .title-3d {
+                font-size: 2.625rem !important; /* 30% smaller than 3.75rem */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="app" class="min-h-screen">
+        <!-- Search Bar -->
+        <div class="fixed top-0 left-0 right-0 bg-opacity-90 bg-white p-3.2 z-50 shadow-lg">
+            <div class="max-w-4xl mx-auto relative">
+                <!-- Title -->
+                <div class="text-center mb-3.2">
+                    <h1 class="text-6xl font-bold text-gray-800 title-3d">Black3DPlanet</h1>
+                </div>
+                <div class="text-center mb-3.2 text-black" >
+                    Black culture 🪐 and backgrounds across the cosmos 
+                    </div>
+                
+                <!-- Merchandise Section in Header -->
+                <div class="merchandise-section-header mb-3.2">
+                    <div class="merchandise-container-header">
+                        <div class="merchandise-grid-header">
+                            <div class="merchandise-item-header">
+                                <div class="merchandise-image" onclick="window.open('https://www.etsy.com/listing/4378754571/gaborah-prime?ref=related-1&dd=1&logging_key=28c875d182a3abd59c1301e9b80ef60a090b3673%3A4378754571', '_blank')" style="cursor: pointer;">
+                                    <img src="verdisplay/b3dpdisplay1.png" alt="Black3DPlanet Display 1" loading="lazy">
+                                </div>
+                                <div class="merchandise-info" onclick="window.open('https://www.etsy.com/listing/4378754571/gaborah-prime?ref=related-1&dd=1&logging_key=28c875d182a3abd59c1301e9b80ef60a090b3673%3A4378754571', '_blank')" style="cursor: pointer;">
+                                    <h2>Gaborah Prime: An Afrofuturistic sentinel</h2>
+                                    <p class="merchandise-price">$6.99</p>
+                                    <button class="merchandise-btn" onclick="window.open('https://www.etsy.com/listing/4378754571/gaborah-prime?ref=related-1&dd=1&logging_key=28c875d182a3abd59c1301e9b80ef60a090b3673%3A4378754571', '_blank')">Purchase</button>
+                                </div>
+                            </div>
+                            
+                            <div class="merchandise-item-header">
+                                <div class="merchandise-image" onclick="window.open('https://www.etsy.com/listing/4378751074/eboni-keeper-of-two-lights?ref=shop_home_active_1&dd=1&logging_key=2da8210767df1a476d8541060d2998647cdcca61%3A4378751074', '_blank')" style="cursor: pointer;">
+                                    <img src="verdisplay/b3dpdisplay2.png" alt="Black3DPlanet Display 2" loading="lazy">
+                                </div>
+                                <div class="merchandise-info" onclick="window.open('https://www.etsy.com/listing/4378751074/eboni-keeper-of-two-lights?ref=shop_home_active_1&dd=1&logging_key=2da8210767df1a476d8541060d2998647cdcca61%3A4378751074', '_blank')" style="cursor: pointer;">
+                                    <h2>Eboni: Keeper of<br>two lights</h2>
+                                    <p class="merchandise-price">$6.99</p>
+                                    <button class="merchandise-btn" onclick="window.open('https://www.etsy.com/listing/4378751074/eboni-keeper-of-two-lights?ref=shop_home_active_1&dd=1&logging_key=2da8210767df1a476d8541060d2998647cdcca61%3A4378751074', '_blank')">Purchase</button>
+                                </div>
+                            </div>
+                            
+                            <div class="merchandise-item-header">
+                                <div class="merchandise-image" onclick="window.open('https://www.etsy.com/listing/4378748228/house-of-nebula-ascension?ref=related-3&dd=1&logging_key=78f4dee42c598233b19d1c480ffa2409f1eb966c%3A4378748228', '_blank')" style="cursor: pointer;">
+                                    <img src="verdisplay/b3dpdisplay3.png" alt="Black3DPlanet Display 3" loading="lazy">
+                                </div>
+                                <div class="merchandise-info" onclick="window.open('https://www.etsy.com/listing/4378748228/house-of-nebula-ascension?ref=related-3&dd=1&logging_key=78f4dee42c598233b19d1c480ffa2409f1eb966c%3A4378748228', '_blank')" style="cursor: pointer;">
+                                    <h2>Ascension: A couture apparition in motion</h2>
+                                    <p class="merchandise-price">$5.99</p>
+                                    <button class="merchandise-btn" onclick="window.open('https://www.etsy.com/listing/4378748228/house-of-nebula-ascension?ref=related-3&dd=1&logging_key=78f4dee42c598233b19d1c480ffa2409f1eb966c%3A4378748228', '_blank')">Purchase</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <input 
+                    type="text" 
+                    v-model="searchQuery"
+                    @keydown.down="selectNextResult"
+                    @keydown.up="selectPreviousResult"
+                    @keydown.enter="selectResult"
+                    placeholder="Search free wallpapers by title or use @ for tags..."
+                    class="w-full p-2 bg-gray-100 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-400 text-gray-800 mb-3.5"
+                >
+                <!-- Search Results Dropdown -->
+                <div v-if="showDropdown" class="search-dropdown absolute w-full mt-2 rounded-lg overflow-hidden z-50 shadow-lg">
+                    <div 
+                        v-for="(result, index) in searchResults" 
+                        :key="index"
+                        @click="selectWallpaperFromSearch(result)"
+                        :class="['p-2 cursor-pointer hover:bg-gray-100 transition-colors duration-200', 
+                                {'selected-item': index === selectedResultIndex}]"
+                    >
+                        <div class="font-bold text-gray-800">{{ result.description }}</div>
+                        <div class="text-sm text-gray-600">
+                            Tags: {{ result.tags.join(', ') }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="layout-container pt-20">
+            <!-- Side Panel -->
+            <div class="side-panel w-1/3 h-screen overflow-y-auto fixed left-0 p-4 smooth-scroll">
+                <div v-for="wallpaper in sortedWallpapers" :key="wallpaper.filename" 
+                     :class="['wallpaper-list-item', {'selected': selectedWallpaper?.filename === wallpaper.filename}]"
+                     :id="'list-' + wallpaper.filename"
+                     @click.stop="selectWallpaperFromList(wallpaper)">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="font-bold text-gray-800">{{ wallpaper.description }}</h3>
+                            <div class="text-sm text-gray-600 mt-1">
+                                Tags: {{ wallpaper.tags.join(', ') }}
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-500">
+                            {{ wallpaper.metadata.file_size_mb }}MB
+                        </div>
+                    </div>
+                    
+                    <div :class="['info-panel', {'expanded': expandedPanels[wallpaper.filename]}]">
+                        <div class="mt-4 text-sm text-gray-600">
+                            <div class="grid grid-cols-2 gap-2">
+                                <div>Resolution:</div>
+                                <div>{{ wallpaper.metadata.width }}x{{ wallpaper.metadata.height }}</div>
+                                <div>File Size:</div>
+                                <div>{{ wallpaper.metadata.file_size_mb }}MB</div>
+                                <div>File Type:</div>
+                                <div>{{ getFileExtension(wallpaper.filename) }}</div>
+                            </div>
+                            <a :href="wallpaper.github_raw_url" 
+                               target="_blank"
+                               class="block mt-4 text-center p-2 rounded-lg border border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-white transition-colors duration-200">
+                                Download Wallpaper
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Preview Panel -->
+            <div class="main-panel min-h-screen p-4">
+                <div class="image-grid-container">
+                    <div class="image-grid">
+                        <div v-for="wallpaper in wallpapers" 
+                             :key="wallpaper.filename"
+                             class="wallpaper-card"
+                             :class="{'selected-preview': selectedWallpaper?.filename === wallpaper.filename}"
+                             :id="'preview-' + wallpaper.filename"
+                             @click="selectWallpaperFromPreview(wallpaper)">
+                            <div class="image-container">
+                                <img :src="wallpaper.github_raw_url" 
+                                     :alt="getFilenameWithoutExtension(wallpaper.filename)"
+                                     class="w-full h-48 object-cover transition-transform duration-300 hover:scale-105"
+                                     loading="lazy"
+                                     @error="handleImageError"
+                                     @load="handleImageLoad">
+                                
+                                <!-- Loading State -->
+                                <div v-if="!imageLoads[wallpaper.filename] && !imageErrors[wallpaper.filename]" class="image-loading">
+                                    <div>Loading...</div>
+                                </div>
+                                
+                                <!-- Error State -->
+                                <div v-if="imageErrors[wallpaper.filename]" class="image-error">
+                                    <div>
+                                        <div class="text-lg mb-2">⚠️</div>
+                                        <div>Image failed to load</div>
+                                        <div class="text-xs mt-1">{{ getFilenameWithoutExtension(wallpaper.filename) }}</div>
+                                        <div class="text-xs mt-1 text-red-500">{{ wallpaper.github_raw_url }}</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="download-button-container">
+                                <button class="download-button" @click="downloadImage(wallpaper.filename)">
+                                    &nbsp;&nbsp;Download
+                                </button>
+                            </div>
+
+                            <!-- Mobile Info Panel -->
+                            <div :class="['mobile-info-panel', {'expanded': selectedWallpaper?.filename === wallpaper.filename}]">
+                                <div class="mobile-info-content">
+                                    <div class="text-sm text-gray-600">
+                                        <h3 class="font-bold text-gray-800 text-lg mb-2">
+                                            {{ wallpaper.description }}
+                                        </h3>
+                                        <div class="mb-2">
+                                            Tags: {{ wallpaper.tags.join(', ') }}
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-2">
+                                            <div>Resolution:</div>
+                                            <div>{{ wallpaper.metadata.width }}x{{ wallpaper.metadata.height }}</div>
+                                            <div>File Size:</div>
+                                            <div>{{ wallpaper.metadata.file_size_mb }}MB</div>
+                                            <div>File Type:</div>
+                                            <div>{{ getFileExtension(wallpaper.filename) }}</div>
+                                        </div>
+                                        <a :href="wallpaper.github_raw_url" 
+                                           target="_blank"
+                                           class="block mt-4 text-center p-2 rounded-lg border border-blue-400 text-blue-600 hover:bg-blue-400 hover:text-white transition-colors duration-200">
+                                            Download Wallpaper
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articles Section -->
+        <div class="articles-section">
+            <div class="articles-container">
+                <!-- First Article Section -->
+                <div class="article-section-left">
+                    <div class="articles-header">
+                    Latest Tech News
+                    </div>
+                    <div id="articles-list-mobile"></div>
+                </div>
+                
+                <!-- Second Article Section -->
+                <div class="article-section-right">
+                    <div class="articles-header">
+                    A.I. Coding Assistants and Tools
+                    </div>
+                    <div id="articles-list-mobile-2"></div>
+                </div>
+            </div>
+            
+            <!-- Third Article Section -->
+            <div class="articles-container-third">
+                <div class="article-section-third">
+                    <div class="articles-header">
+                        Latest A.I. News
+                    </div>
+                    <div id="articles-list-mobile-3"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-text">
+                    © 2025 Black3DPlanet. All rights reserved.
+                </div>
+                <div class="footer-social">
+                    <a href="https://instagram.com/black3dplanet" target="_blank" class="social-link">
+                        <img src="instagramlogo1.png" alt="Instagram" class="social-icon" height="15px" width="15px">
+                        <span>insta@black3dplanet</span>
+                    </a>
+                    <a href="https://twitter.com/black3dplanet" target="_blank" class="social-link">
+                        <img src="twtrlogo1.png" alt="Twitter" class="social-icon"  height="15px" width="15px">
+                        <span>twtr@black3dplanet</span>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Test if Vue is available
+        console.log('Vue available:', typeof Vue !== 'undefined');
+        console.log('Vue version:', Vue?.version || 'Not loaded');
+        
+        // Test if Tailwind is working
+        console.log('Tailwind classes test:', document.createElement('div').className = 'bg-blue-500 p-4');
+        
+        const { createApp, ref, computed, watch, nextTick } = Vue
+
+        // Check if Vue functions are available
+        if (!createApp) {
+            console.error('Vue createApp not available');
+            document.body.innerHTML = '<div style="padding: 20px; color: red;">Error: Vue.js failed to load properly</div>';
+        } else {
+            console.log('Vue functions available:', { createApp: !!createApp, ref: !!ref, computed: !!computed });
+        }
+
+        createApp({
+            setup() {
+                const wallpapers = ref([])
+                const selectedWallpaper = ref(null)
+                const searchQuery = ref('')
+                const selectedResultIndex = ref(0)
+                const expandedPanels = ref({})
+                const imageErrors = ref({})
+                const imageLoads = ref({})
+                const articles = ref([])
+
+                // Helper functions
+                const getFilenameWithoutExtension = (filename) => {
+                    return filename.split('.').slice(0, -1).join('.')
+                }
+
+                const getFileExtension = (filename) => {
+                    return filename.split('.').pop().toUpperCase()
+                }
+
+                const isMobile = () => window.innerWidth <= 768
+
+                const handleImageError = (event) => {
+                    const filename = event.target.alt + '.' + getFileExtension(event.target.src.split('/').pop())
+                    imageErrors.value[filename] = true
+                    console.error('Failed to load image:', event.target.src, 'for filename:', filename)
+                    
+                    // Log additional debugging info
+                    console.log('Image error details:', {
+                        src: event.target.src,
+                        filename: filename,
+                        alt: event.target.alt,
+                        naturalWidth: event.target.naturalWidth,
+                        naturalHeight: event.target.naturalHeight
+                    })
+                }
+
+                const handleImageLoad = (event) => {
+                    const filename = event.target.alt + '.' + getFileExtension(event.target.src.split('/').pop())
+                    imageLoads.value[filename] = true
+                    imageErrors.value[filename] = false
+                    console.log('Successfully loaded image:', filename, 'from:', event.target.src)
+                }
+
+                // Load wallpapers data
+                console.log('Starting to load wallpapers database...');
+                fetch('wallpapers_database.json')
+                    .then(response => {
+                        console.log('Database response status:', response.status);
+                        if (!response.ok) {
+                            throw new Error(`HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('Database loaded successfully, entries:', Object.keys(data).length);
+                        wallpapers.value = Object.values(data);
+                        console.log('Wallpapers array length:', wallpapers.value.length);
+                        
+                        // Test if local images are in the data
+                        const localImages = wallpapers.value.filter(w => w.github_raw_url.includes('imgs/'));
+                        console.log('Local images found:', localImages.length);
+                        localImages.forEach(img => console.log('Local image:', img.filename, 'URL:', img.github_raw_url));
+                    })
+                    .catch(error => {
+                        console.error('Failed to load wallpapers database:', error);
+                        
+                        // Fallback: Create a simple database with just the local images
+                        console.log('Creating fallback database with local images...');
+                        const fallbackData = {
+                            "pic61825.jpg": {
+                                "filename": "pic61825.jpg",
+                                "tags": ["landscape", "nature", "high-resolution"],
+                                "metadata": {
+                                    "width": 4000,
+                                    "height": 3000,
+                                    "aspect_ratio": 1.33,
+                                    "file_size": 16777216,
+                                    "file_size_mb": 16.0
+                                },
+                                "github_raw_url": "imgs/pic61825.jpg"
+                            },
+                            "pic61725.jpg": {
+                                "filename": "pic61725.jpg",
+                                "tags": ["architecture", "urban", "cityscape"],
+                                "metadata": {
+                                    "width": 3840,
+                                    "height": 2160,
+                                    "aspect_ratio": 1.78,
+                                    "file_size": 10485760,
+                                    "file_size_mb": 10.0
+                                },
+                                "github_raw_url": "imgs/pic61725.jpg"
+                            },
+                            "pic61825c.jpg": {
+                                "filename": "pic61825c.jpg",
+                                "tags": ["ocean", "waves", "seascape"],
+                                "metadata": {
+                                    "width": 3000,
+                                    "height": 2000,
+                                    "aspect_ratio": 1.5,
+                                    "file_size": 5347737,
+                                    "file_size_mb": 5.1
+                                },
+                                "github_raw_url": "imgs/pic61825c.jpg"
+                            },
+                            "pic61725c.jpg": {
+                                "filename": "pic61725c.jpg",
+                                "tags": ["forest", "nature", "trees"],
+                                "metadata": {
+                                    "width": 4000,
+                                    "height": 3000,
+                                    "aspect_ratio": 1.33,
+                                    "file_size": 15728640,
+                                    "file_size_mb": 15.0
+                                },
+                                "github_raw_url": "imgs/pic61725c.jpg"
+                            },
+                            "pic61825d.jpg": {
+                                "filename": "pic61825d.jpg",
+                                "tags": ["sunset", "sky", "colors"],
+                                "metadata": {
+                                    "width": 3500,
+                                    "height": 2500,
+                                    "aspect_ratio": 1.4,
+                                    "file_size": 11534336,
+                                    "file_size_mb": 11.0
+                                },
+                                "github_raw_url": "imgs/pic61825d.jpg"
+                            },
+                            "pic61825b.jpg": {
+                                "filename": "pic61825b.jpg",
+                                "tags": ["mountain", "peak", "landscape"],
+                                "metadata": {
+                                    "width": 3200,
+                                    "height": 2400,
+                                    "aspect_ratio": 1.33,
+                                    "file_size": 8283750,
+                                    "file_size_mb": 7.9
+                                },
+                                "github_raw_url": "imgs/pic61825b.jpg"
+                            }
+                        };
+                        
+                        wallpapers.value = Object.values(fallbackData);
+                        console.log('Fallback database created with', wallpapers.value.length, 'images');
+                        
+                        // Show a notice to the user
+                        const notice = document.createElement('div');
+                        notice.style.cssText = 'position: fixed; top: 80px; left: 50%; transform: translateX(-50%); background: #fff3cd; border: 1px solid #ffeaa7; border-radius: 8px; padding: 15px; color: #856404; z-index: 1000; max-width: 500px; text-align: center;';
+                        notice.innerHTML = '<strong>Note:</strong> Using fallback database with local images only. To see all wallpapers, serve this file through a web server (e.g., using Python: <code>python -m http.server</code>).';
+                        document.body.appendChild(notice);
+                    })
+
+                const sortedWallpapers = computed(() => {
+                    if (!selectedWallpaper.value) return wallpapers.value
+
+                    return [
+                        selectedWallpaper.value,
+                        ...wallpapers.value.filter(w => w.filename !== selectedWallpaper.value.filename)
+                    ]
+                })
+
+                const searchResults = computed(() => {
+                    if (!searchQuery.value) return []
+
+                    const query = searchQuery.value.toLowerCase()
+                    if (query.startsWith('@')) {
+                        const tagQuery = query.slice(1)
+                        return wallpapers.value.filter(w => 
+                            w.tags.some(tag => tag.toLowerCase().includes(tagQuery))
+                        )
+                    }
+
+                    return wallpapers.value.filter(w => 
+                        getFilenameWithoutExtension(w.filename).toLowerCase().includes(query) ||
+                        w.tags.some(tag => tag.toLowerCase().includes(query))
+                    )
+                })
+
+                const showDropdown = computed(() => 
+                    searchQuery.value.length > 0 && searchResults.value.length > 0
+                )
+
+                // When selecting from list
+                const selectWallpaperFromList = async (wallpaper) => {
+                    selectedWallpaper.value = wallpaper
+                    expandedPanels.value = { [wallpaper.filename]: true }
+                    
+                    await nextTick()
+                    const previewElement = document.getElementById('preview-' + wallpaper.filename)
+                    if (previewElement) {
+                        previewElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                    }
+                }
+
+                // When selecting from preview
+                const selectWallpaperFromPreview = async (wallpaper) => {
+                    if (selectedWallpaper.value?.filename === wallpaper.filename) {
+                        // Add a small delay before closing to allow animation
+                        setTimeout(() => {
+                            selectedWallpaper.value = null;
+                        }, 50);
+                        return;
+                    }
+
+                    selectedWallpaper.value = wallpaper;
+                    expandedPanels.value = { [wallpaper.filename]: true };
+                    
+                    if (!isMobile()) {
+                        await nextTick();
+                        const listElement = document.getElementById('list-' + wallpaper.filename);
+                        if (listElement) {
+                            // Position the selected item as the 3rd item from the top
+                            const sidePanel = document.querySelector('.side-panel');
+                            if (sidePanel) {
+                                // Get all list items to calculate average height
+                                const allListItems = sidePanel.querySelectorAll('.wallpaper-list-item');
+                                if (allListItems.length > 0) {
+                                    const firstItem = allListItems[0];
+                                    const itemHeight = firstItem.offsetHeight;
+                                    const marginBottom = 16; // 1rem margin-bottom from CSS
+                                    const totalItemHeight = itemHeight + marginBottom;
+                                    const targetPosition = totalItemHeight * 2; // 3rd position (0-based index: 0,1,2)
+                                    
+                                    // Calculate the position relative to the side panel
+                                    const elementRect = listElement.getBoundingClientRect();
+                                    const panelRect = sidePanel.getBoundingClientRect();
+                                    const relativeTop = elementRect.top - panelRect.top;
+                                    
+                                    // Calculate the scroll position to place the element as 3rd item
+                                    const scrollTop = sidePanel.scrollTop + relativeTop - targetPosition;
+                                    
+                                    console.log('Scroll calculation:', {
+                                        itemHeight,
+                                        totalItemHeight,
+                                        targetPosition,
+                                        relativeTop,
+                                        currentScrollTop: sidePanel.scrollTop,
+                                        newScrollTop: scrollTop,
+                                        element: listElement.textContent.substring(0, 50)
+                                    });
+                                    
+                                    sidePanel.scrollTo({
+                                        top: Math.max(0, scrollTop),
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // When selecting from search
+                const selectWallpaperFromSearch = async (wallpaper) => {
+                    selectedWallpaper.value = wallpaper
+                    expandedPanels.value = { [wallpaper.filename]: true }
+                    searchQuery.value = ''
+                    
+                    await nextTick()
+                    const previewElement = document.getElementById('preview-' + wallpaper.filename)
+                    if (previewElement) {
+                        previewElement.scrollIntoView({ behavior: 'smooth', block: 'center' })
+                    }
+
+                    if (!isMobile()) {
+                        const listElement = document.getElementById('list-' + wallpaper.filename)
+                        if (listElement) {
+                            // Position the selected item as the 3rd item from the top
+                            const sidePanel = document.querySelector('.side-panel');
+                            if (sidePanel) {
+                                // Get all list items to calculate average height
+                                const allListItems = sidePanel.querySelectorAll('.wallpaper-list-item');
+                                if (allListItems.length > 0) {
+                                    const firstItem = allListItems[0];
+                                    const itemHeight = firstItem.offsetHeight;
+                                    const marginBottom = 16; // 1rem margin-bottom from CSS
+                                    const totalItemHeight = itemHeight + marginBottom;
+                                    const targetPosition = totalItemHeight * 2; // 3rd position (0-based index: 0,1,2)
+                                    
+                                    // Calculate the position relative to the side panel
+                                    const elementRect = listElement.getBoundingClientRect();
+                                    const panelRect = sidePanel.getBoundingClientRect();
+                                    const relativeTop = elementRect.top - panelRect.top;
+                                    
+                                    // Calculate the scroll position to place the element as 3rd item
+                                    const scrollTop = sidePanel.scrollTop + relativeTop - targetPosition;
+                                    
+                                    console.log('Search scroll calculation:', {
+                                        itemHeight,
+                                        totalItemHeight,
+                                        targetPosition,
+                                        relativeTop,
+                                        currentScrollTop: sidePanel.scrollTop,
+                                        newScrollTop: scrollTop,
+                                        element: listElement.textContent.substring(0, 50)
+                                    });
+                                    
+                                    sidePanel.scrollTo({
+                                        top: Math.max(0, scrollTop),
+                                        behavior: 'smooth'
+                                    });
+                                }
+                            }
+                        }
+                    }
+                }
+
+                const selectNextResult = () => {
+                    if (selectedResultIndex.value < searchResults.value.length - 1) {
+                        selectedResultIndex.value++
+                    }
+                }
+
+                const selectPreviousResult = () => {
+                    if (selectedResultIndex.value > 0) {
+                        selectedResultIndex.value--
+                    }
+                }
+
+                const selectResult = () => {
+                    if (searchResults.value.length > 0) {
+                        selectWallpaperFromSearch(searchResults.value[selectedResultIndex.value])
+                    }
+                }
+
+                watch(searchQuery, () => {
+                    selectedResultIndex.value = 0
+                })
+
+                return {
+                    wallpapers,
+                    selectedWallpaper,
+                    searchQuery,
+                    searchResults,
+                    showDropdown,
+                    selectedResultIndex,
+                    expandedPanels,
+                    sortedWallpapers,
+                    imageErrors,
+                    imageLoads,
+                    articles,
+                    getFilenameWithoutExtension,
+                    getFileExtension,
+                    handleImageError,
+                    handleImageLoad,
+                    selectWallpaperFromList,
+                    selectWallpaperFromPreview,
+                    selectWallpaperFromSearch,
+                    selectNextResult,
+                    selectPreviousResult,
+                    selectResult
+                }
+            }
+        }).mount('#app')
+    </script>
+
+    <script>
+        // Load and display articles from JSON files
+        Promise.all([
+            fetch('articlelist1.json').then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            }),
+            fetch('articlelistai1.json').then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            }),
+            fetch('tooloptions1.json').then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+        ])
+        .then(([data1, data2, data3]) => {
+            const articlesList = document.getElementById('articles-list-mobile');
+            const articlesList2 = document.getElementById('articles-list-mobile-2');
+            const articlesList3 = document.getElementById('articles-list-mobile-3');
+            
+            // Load tech news for first section (Latest Tech News)
+            data1.forEach(article => {
+                const articleEntry = document.createElement('div');
+                articleEntry.className = 'article-entry';
+                
+                const siteSpan = document.createElement('span');
+                siteSpan.className = 'article-site';
+                siteSpan.textContent = article.site + ' : ';
+                
+                const titleLink = document.createElement('a');
+                titleLink.className = 'article-title';
+                titleLink.href = article.link;
+                titleLink.target = '_blank';
+                titleLink.textContent = article.title;
+                
+                articleEntry.appendChild(siteSpan);
+                articleEntry.appendChild(titleLink);
+                articlesList.appendChild(articleEntry);
+            });
+            
+            // Load tools for second section (A.I. Coding Assistants and Tools)
+            console.log('Loading tools for second section...');
+            data3.forEach((tool, index) => {
+                console.log(`Tool ${index + 1}:`, tool);
+                console.log(`Tool site:`, tool.site);
+                console.log(`Tool link:`, tool.link);
+                console.log(`Tool article:`, tool.article);
+                
+                const toolEntry = document.createElement('div');
+                toolEntry.className = 'article-entry';
+                
+                const siteSpan = document.createElement('span');
+                siteSpan.className = 'article-site';
+               /* siteSpan.textContent = tool.site + ' : '; */
+                
+                const titleLink = document.createElement('a');
+                titleLink.className = 'article-title';
+                titleLink.href = tool.link;
+                titleLink.target = '_blank';
+                titleLink.textContent = tool.site;
+                
+                const descriptionDiv = document.createElement('div');
+                descriptionDiv.className = 'tool-description';
+                descriptionDiv.textContent = tool.article;
+                
+                toolEntry.appendChild(siteSpan);
+                toolEntry.appendChild(titleLink);
+                toolEntry.appendChild(descriptionDiv);
+                articlesList2.appendChild(toolEntry);
+                console.log(`Added tool ${index + 1} to second section`);
+            });
+            
+            // Load AI news for third section (Latest A.I. News)
+            data2.forEach(article => {
+                const articleEntry = document.createElement('div');
+                articleEntry.className = 'article-entry';
+                
+                const siteSpan = document.createElement('span');
+                siteSpan.className = 'article-site';
+                siteSpan.textContent = article.site + ' : '; 
+                
+                const titleLink = document.createElement('a');
+                titleLink.className = 'article-title';
+                titleLink.href = article.link;
+                titleLink.target = '_blank';
+                titleLink.textContent = article.title;
+                
+                articleEntry.appendChild(siteSpan);
+                articleEntry.appendChild(titleLink);
+                articlesList3.appendChild(articleEntry);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading articles:', error);
+            
+            // Fallback: Create sample articles when JSON can't be loaded
+            const articlesList = document.getElementById('articles-list-mobile');
+            const articlesList2 = document.getElementById('articles-list-mobile-2');
+            const articlesList3 = document.getElementById('articles-list-mobile-3');
+            
+            const fallbackTools = [
+                {
+                    site: "Sample Tool 1",
+                    link: "#",
+                    article: "This is a sample tool description for demonstration purposes."
+                },
+                {
+                    site: "Sample Tool 2", 
+                    link: "#",
+                    article: "Another sample tool with a different description."
+                },
+                {
+                    site: "Sample Tool 3",
+                    link: "#", 
+                    article: "A third sample tool to show the layout."
+                }
+            ];
+            
+            const fallbackArticles2 = [
+                {
+                    site: "AI Weekly",
+                    title: "Sample AI Article 1 - Machine Learning Advances",
+                    link: "#"
+                },
+                {
+                    site: "Tech AI",
+                    title: "Sample AI Article 2 - Neural Networks",
+                    link: "#"
+                },
+                {
+                    site: "AI Today",
+                    title: "Sample AI Article 3 - Artificial Intelligence",
+                    link: "#"
+                }
+            ];
+            
+            const fallbackArticles1 = [
+                {
+                    site: "Tech News",
+                    title: "Sample Article 1 - Technology Trends",
+                    link: "#"
+                },
+                {
+                    site: "Science Daily",
+                    title: "Sample Article 2 - Scientific Discoveries",
+                    link: "#"
+                },
+                {
+                    site: "Business Insider",
+                    title: "Sample Article 3 - Business Insights",
+                    link: "#"
+                }
+            ];
+            
+            // Load fallback tech articles for first section (Latest Tech News)
+            fallbackArticles1.forEach(article => {
+                const articleEntry = document.createElement('div');
+                articleEntry.className = 'article-entry';
+                
+                const siteSpan = document.createElement('span');
+                siteSpan.className = 'article-site';
+                siteSpan.textContent = article.site + ' : ';
+                
+                const titleLink = document.createElement('a');
+                titleLink.className = 'article-title';
+                titleLink.href = article.link;
+                titleLink.target = '_blank';
+                titleLink.textContent = article.title;
+                
+                articleEntry.appendChild(siteSpan);
+                articleEntry.appendChild(titleLink);
+                articlesList.appendChild(articleEntry);
+            });
+            
+            // Load fallback tools for second section (A.I. Coding Assistants and Tools)
+            fallbackTools.forEach(tool => {
+                const toolEntry = document.createElement('div');
+                toolEntry.className = 'article-entry';
+                
+                const siteSpan = document.createElement('span');
+                siteSpan.className = 'article-site';
+                siteSpan.textContent = tool.site + ' : ';
+                
+                const titleLink = document.createElement('a');
+                titleLink.className = 'article-title';
+                titleLink.href = tool.link;
+                titleLink.target = '_blank';
+                titleLink.textContent = tool.site;
+                
+                const descriptionDiv = document.createElement('div');
+                descriptionDiv.className = 'tool-description';
+                descriptionDiv.textContent = tool.article;
+                
+                toolEntry.appendChild(siteSpan);
+                toolEntry.appendChild(titleLink);
+                toolEntry.appendChild(descriptionDiv);
+                articlesList2.appendChild(toolEntry);
+            });
+            
+            // Load fallback AI articles for third section (Latest A.I. News)
+            fallbackArticles2.forEach(article => {
+                const articleEntry = document.createElement('div');
+                articleEntry.className = 'article-entry';
+                
+                const siteSpan = document.createElement('span');
+                siteSpan.className = 'article-site';
+                siteSpan.textContent = article.site + ' : ';
+                
+                const titleLink = document.createElement('a');
+                titleLink.className = 'article-title';
+                titleLink.href = article.link;
+                titleLink.target = '_blank';
+                titleLink.textContent = article.title;
+                
+                articleEntry.appendChild(siteSpan);
+                articleEntry.appendChild(titleLink);
+                articlesList3.appendChild(articleEntry);
+            });
+            
+            // Add a notice about the fallback
+            const notice1 = document.createElement('div');
+            notice1.style.cssText = 'text-align: center; padding: 10px; color: rgba(255,255,255,0.8); font-size: 0.9rem;';
+            notice1.textContent = 'Note: Using sample tech articles. To see real articles, serve this file through a web server.';
+            articlesList.appendChild(notice1);
+            
+            const notice2 = document.createElement('div');
+            notice2.style.cssText = 'text-align: center; padding: 10px; color: rgba(255,255,255,0.8); font-size: 0.9rem;';
+            notice2.textContent = 'Note: Using sample tools. To see real tools, serve this file through a web server.';
+            articlesList2.appendChild(notice2);
+            
+            const notice3 = document.createElement('div');
+            notice3.style.cssText = 'text-align: center; padding: 10px; color: rgba(255,255,255,0.8); font-size: 0.9rem;';
+            notice3.textContent = 'Note: Using sample tech articles. To see real articles, serve this file through a web server.';
+            articlesList3.appendChild(notice3);
+        });
+    </script>
+
+    <script>
+        // Merchandise image expand/collapse functionality
+        function toggleImageExpand(imageContainer) {
+            const isExpanded = imageContainer.classList.contains('expanded');
+            
+            if (isExpanded) {
+                // Collapse the image
+                imageContainer.classList.remove('expanded');
+                const overlay = document.querySelector('.merchandise-overlay');
+                if (overlay) {
+                    overlay.classList.remove('active');
+                }
+            } else {
+                // Expand the image
+                imageContainer.classList.add('expanded');
+                
+                // Create overlay if it doesn't exist
+                let overlay = document.querySelector('.merchandise-overlay');
+                if (!overlay) {
+                    overlay = document.createElement('div');
+                    overlay.className = 'merchandise-overlay';
+                    overlay.onclick = function() {
+                        // Close all expanded images when clicking overlay
+                        const expandedImages = document.querySelectorAll('.merchandise-image.expanded');
+                        expandedImages.forEach(img => {
+                            img.classList.remove('expanded');
+                        });
+                        overlay.classList.remove('active');
+                    };
+                    document.body.appendChild(overlay);
+                }
+                overlay.classList.add('active');
+            }
+        }
+
+        // Close expanded images when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const expandedImages = document.querySelectorAll('.merchandise-image.expanded');
+                expandedImages.forEach(img => {
+                    img.classList.remove('expanded');
+                });
+                const overlay = document.querySelector('.merchandise-overlay');
+                if (overlay) {
+                    overlay.classList.remove('active');
+                }
+            }
+        });
+    </script>
+</body>
+</html>
