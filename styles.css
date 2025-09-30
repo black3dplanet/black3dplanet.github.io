@@ -578,7 +578,7 @@ body {
     font-size: 0.875rem; /* h3 size, smaller than h2 */
     font-weight: bold;
     margin-bottom: 0.15rem; /* Reduced by 40% (0.25rem * 0.6) */
-    color: #ffffff; /* White text for better contrast on overlay */
+    color: #1976d2; /* Match purchase button blue */
     line-height: 1.2;
 }
 
@@ -633,7 +633,7 @@ body {
     
     .merchandise-item-header .merchandise-info h3 {
         font-size: 0.7rem; /* h3 size for mobile */
-        color: #ffffff; /* White text for better contrast on overlay */
+        color: #1976d2; /* Match purchase button blue */
     }
     
     .merchandise-item-header .merchandise-price {
