@@ -65,9 +65,29 @@
     "article": "Generative-AI low-code platform for secure enterprise-grade app creation."
   },
   {
-    "site": "Adobe Firefly",
-    "link": "https://www.adobe.com/firefly",
-    "article": "Adobe's creative AI generates images, text effects, and more within creative workflows easily."
+    "site": "Stable Diffusion",
+    "link": "https://stability.ai",
+    "article": "Open-source AI model generating detailed images from text with community customization easily."
+  },
+    {
+    "site": "NightCafe Art Generator",
+    "link": "https://creator.nightcafe.studio/",
+    "article": "AI Art Generator designed for creativity and fun."
+  },
+    {
+    "site": "Dream AI",
+    "link": "https://dream.ai/",
+    "article": "Creativity and fun AI art generator also with mobile version.""
+  },
+    {
+    "site": "Runway AI",
+    "link": "https://runwayml.com/",
+    "article": "Advanced AI image and video tools allow you to explore ideas in near real-time."
+  },
+    {
+    "site": "Craiyon",
+    "link": "https://www.craiyon.com/en",
+    "article": "Generative AI allowing you to create stunning images across various styles."
   },
   {
     "site": "DALL-E 3",
@@ -85,9 +105,9 @@
     "article": "AI vector art generator for easily creating and editing scalable graphics quickly online."
   },
   {
-    "site": "Stable Diffusion",
-    "link": "https://stability.ai",
-    "article": "Open-source AI model generating detailed images from text with community customization easily."
+    "site": "Adobe Firefly",
+    "link": "https://www.adobe.com/firefly",
+    "article": "Adobe's creative AI generates images, text effects, and more within creative workflows easily."
   },
   {
     "site": "Canva AI",
