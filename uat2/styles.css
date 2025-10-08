@@ -21,6 +21,13 @@ body {
     box-shadow: 0 0 3px var(--neon-teal);
 }
 
+/* Search Bar Container Styles */
+.search-bar-container {
+    width: 100%;
+    padding: 45vh 2rem 2rem 2rem; /* 45vh top padding to position halfway down initially */
+    background-color: var(--light-blue-bg);
+}
+
 .search-dropdown {
     background-color: rgba(255, 255, 255, 0.95);
     border: 1px solid var(--neon-teal);
@@ -231,6 +238,12 @@ body {
 @media (min-width: 769px) {
     .layout-container {
         display: flex;
+        flex-direction: column;
+    }
+    
+    .search-bar-container {
+        width: 100%;
+        padding: 45vh 2rem 2rem 2rem;
     }
     
     .side-panel {
@@ -238,12 +251,14 @@ body {
         width: 33.333333%;
         height: 100vh;
         overflow-y: auto;
+        top: 0;
+        padding-top: 4.68rem; /* Start below fixed header */
     }
     
     .main-panel {
         margin-left: 33.333333%;
         width: 66.666667%;
-        padding-top: 4.68rem !important; /* 40% reduction (7.8rem * 0.6) */
+        padding-top: 0 !important;
     }
     
     /* Desktop image height increase */
@@ -262,6 +277,11 @@ body {
         display: block;
     }
     
+    .search-bar-container {
+        width: 100%;
+        padding: 45vh 1rem 1.5rem 1rem;
+    }
+    
     .side-panel {
         display: none;
     }
@@ -269,7 +289,7 @@ body {
     .main-panel {
         margin-left: 0 !important;
         width: 100% !important;
-        padding-top: 5.28rem !important; /* 40% reduction (8.8rem * 0.6) */
+        padding-top: 0 !important;
     }
     
     .image-grid-container {

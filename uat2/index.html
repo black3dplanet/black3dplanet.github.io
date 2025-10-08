@@ -118,37 +118,42 @@
                         </div>
                     </div>
                 </div>
-                
-                <input 
-                    type="text" 
-                    v-model="searchQuery"
-                    @keydown.down="selectNextResult"
-                    @keydown.up="selectPreviousResult"
-                    @keydown.enter="selectResult"
-                    placeholder="Search free wallpapers by title or use @ for tags..."
-                    class="w-full bg-gray-100 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-400 text-gray-800"
-                    style="padding: 0.4rem; font-size: 0.85rem; margin-bottom: 0.5rem;"
-                >
-                <!-- Search Results Dropdown -->
-                <div v-if="showDropdown" class="search-dropdown absolute w-full mt-2 rounded-lg overflow-hidden z-50 shadow-lg">
-                    <div 
-                        v-for="(result, index) in searchResults" 
-                        :key="index"
-                        @click="selectWallpaperFromSearch(result)"
-                        :class="['p-2 cursor-pointer hover:bg-gray-100 transition-colors duration-200', 
-                                {'selected-item': index === selectedResultIndex}]"
-                    >
-                        <div class="font-bold text-gray-800">{{ result.description }}</div>
-                        <div class="text-sm text-gray-600">
-                            Tags: {{ result.tags.join(', ') }}
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
         <!-- Main Content -->
         <div class="layout-container pt-20">
+            <!-- Search Bar Container -->
+            <div class="search-bar-container">
+                <div class="max-w-4xl mx-auto relative">
+                    <input 
+                        type="text" 
+                        v-model="searchQuery"
+                        @keydown.down="selectNextResult"
+                        @keydown.up="selectPreviousResult"
+                        @keydown.enter="selectResult"
+                        placeholder="Search free mobile wallpapers by title or use @ for tags..."
+                        class="w-full bg-gray-100 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-400 text-gray-800"
+                        style="padding: 0.8rem; font-size: 1rem;"
+                    >
+                    <!-- Search Results Dropdown -->
+                    <div v-if="showDropdown" class="search-dropdown absolute w-full mt-2 rounded-lg overflow-hidden z-50 shadow-lg">
+                        <div 
+                            v-for="(result, index) in searchResults" 
+                            :key="index"
+                            @click="selectWallpaperFromSearch(result)"
+                            :class="['p-2 cursor-pointer hover:bg-gray-100 transition-colors duration-200', 
+                                    {'selected-item': index === selectedResultIndex}]"
+                        >
+                            <div class="font-bold text-gray-800">{{ result.description }}</div>
+                            <div class="text-sm text-gray-600">
+                                Tags: {{ result.tags.join(', ') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Side Panel -->
             <div class="side-panel w-1/3 h-screen overflow-y-auto fixed left-0 p-4 smooth-scroll">
                 <div v-for="wallpaper in sortedWallpapers" :key="wallpaper.filename" 
