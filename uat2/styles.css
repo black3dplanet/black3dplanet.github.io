@@ -731,9 +731,8 @@ body {
     .merchandise-item-header .merchandise-btn {
         padding: 0.126rem 0.252rem; /* 40% reduction (0.21rem * 0.6, 0.42rem * 0.6) */
         font-size: 0.74375rem; /* Reduced by 15% (0.875rem * 0.85) */
-        width: auto; /* Auto width to fit text on one line */
-        min-width: 120px; /* Minimum width to ensure text fits */
-        white-space: nowrap; /* Prevent text wrapping */
+        width: auto; /* Auto width to fit text */
+        min-width: 80px; /* Minimum width */
     }
 }
 
