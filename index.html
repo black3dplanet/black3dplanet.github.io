@@ -50,23 +50,23 @@
             font-family: 'Baumans', 'Arial Black', 'Helvetica Bold', 'Arial', sans-serif !important;
             color: #87CEEB !important;
             text-shadow: 
-                2px 2px 0px #34495e,
-                4px 4px 0px #7f8c8d,
-                6px 6px 0px #bdc3c7,
-                8px 8px 0px #ecf0f1,
-                0px 0px 20px rgba(44, 62, 80, 0.3) !important;
-            transform: perspective(500px) rotateX(10deg) !important;
+                1.2px 1.2px 0px #34495e,
+                2.4px 2.4px 0px #7f8c8d,
+                3.6px 3.6px 0px #bdc3c7,
+                4.8px 4.8px 0px #ecf0f1,
+                0px 0px 12px rgba(44, 62, 80, 0.3) !important;
+            transform: perspective(300px) rotateX(10deg) !important;
             transform-style: preserve-3d !important;
-            letter-spacing: 2px !important;
+            letter-spacing: 1.2px !important;
             font-weight: 900 !important;
             transition: all 0.3s ease !important;
-            font-size: 3.75rem !important;
+            font-size: 2.25rem !important; /* 40% reduction from 3.75rem */
         }
         
         /* Mobile responsive for Black3DPlanet title */
         @media (max-width: 768px) {
             .title-3d {
-                font-size: 2.625rem !important; /* 30% smaller than 3.75rem */
+                font-size: 1.575rem !important; /* 40% reduction from 2.625rem */
             }
         }
     </style>
@@ -74,37 +74,47 @@
 <body>
     <div id="app" class="min-h-screen">
         <!-- Search Bar -->
-        <div class="fixed top-0 left-0 right-0 bg-opacity-90 bg-white p-4 z-50 shadow-lg">
+        <div class="fixed top-0 left-0 right-0 bg-opacity-90 bg-white z-50 shadow-lg" style="padding: 0.5rem 1rem;">
             <div class="max-w-4xl mx-auto relative">
                 <!-- Title -->
-                <div class="text-center mb-4">
+                <div class="text-center" style="margin-bottom: 0.3rem;">
                     <h1 class="text-6xl font-bold text-gray-800 title-3d">Black3DPlanet</h1>
                 </div>
-                <div class="text-center mb-4 text-black" >
+                <div class="text-center text-black" style="margin-bottom: 0.3rem; font-size: 0.75rem;">
                     Black culture 🪐 and backgrounds across the cosmos 
                     </div>
                 
-                <input 
-                    type="text" 
-                    v-model="searchQuery"
-                    @keydown.down="selectNextResult"
-                    @keydown.up="selectPreviousResult"
-                    @keydown.enter="selectResult"
-                    placeholder="Search by title or use @ for tags..."
-                    class="w-full p-2 bg-gray-100 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-400 text-gray-800"
-                >
-                <!-- Search Results Dropdown -->
-                <div v-if="showDropdown" class="search-dropdown absolute w-full mt-2 rounded-lg overflow-hidden z-50 shadow-lg">
-                    <div 
-                        v-for="(result, index) in searchResults" 
-                        :key="index"
-                        @click="selectWallpaperFromSearch(result)"
-                        :class="['p-2 cursor-pointer hover:bg-gray-100 transition-colors duration-200', 
-                                {'selected-item': index === selectedResultIndex}]"
-                    >
-                        <div class="font-bold text-gray-800">{{ result.description }}</div>
-                        <div class="text-sm text-gray-600">
-                            Tags: {{ result.tags.join(', ') }}
+                <!-- Merchandise Section in Header -->
+                <div class="merchandise-section-header mb-3.2">
+                    <div class="merchandise-container-header">
+                        <div class="merchandise-grid-header">
+                            <div class="merchandise-item-header">
+                                <div class="merchandise-image" onclick="window.open('https://www.etsy.com/listing/4378754571/gaborah-prime?ref=related-1&dd=1&logging_key=28c875d182a3abd59c1301e9b80ef60a090b3673%3A4378754571', '_blank')" style="cursor: pointer;">
+                                    <img src="verdisplay/b3dpdisplay1.png" alt="Black3DPlanet Display 1" loading="lazy">
+                                </div>
+                                <div class="merchandise-info" onclick="window.open('https://www.etsy.com/listing/4378754571/gaborah-prime?ref=related-1&dd=1&logging_key=28c875d182a3abd59c1301e9b80ef60a090b3673%3A4378754571', '_blank')" style="cursor: pointer;">
+                                    <h3>Gaborah Prime: An Afrofuturistic sentinel</h3>
+                                </div>
+                            </div>
+                            
+                            <div class="merchandise-item-header">
+                                <div class="merchandise-image" onclick="window.open('https://www.etsy.com/listing/4378751074/eboni-keeper-of-two-lights?ref=shop_home_active_1&dd=1&logging_key=2da8210767df1a476d8541060d2998647cdcca61%3A4378751074', '_blank')" style="cursor: pointer;">
+                                    <img src="verdisplay/b3dpdisplay2.png" alt="Black3DPlanet Display 2" loading="lazy">
+                                </div>
+                                <div class="merchandise-info" onclick="window.open('https://www.etsy.com/listing/4378751074/eboni-keeper-of-two-lights?ref=shop_home_active_1&dd=1&logging_key=2da8210767df1a476d8541060d2998647cdcca61%3A4378751074', '_blank')" style="cursor: pointer;">
+                                    <h3>Eboni: Keeper of two lights</h3>
+                                    <button class="merchandise-btn" onclick="window.open('https://www.etsy.com/listing/4378751074/eboni-keeper-of-two-lights?ref=shop_home_active_1&dd=1&logging_key=2da8210767df1a476d8541060d2998647cdcca61%3A4378751074', '_blank')">Purchase :<br>$6.99</button>
+                                </div>
+                            </div>
+                            
+                            <div class="merchandise-item-header">
+                                <div class="merchandise-image" onclick="window.open('https://www.etsy.com/listing/4378748228/house-of-nebula-ascension?ref=related-3&dd=1&logging_key=78f4dee42c598233b19d1c480ffa2409f1eb966c%3A4378748228', '_blank')" style="cursor: pointer;">
+                                    <img src="verdisplay/b3dpdisplay3.png" alt="Black3DPlanet Display 3" loading="lazy">
+                                </div>
+                                <div class="merchandise-info" onclick="window.open('https://www.etsy.com/listing/4378748228/house-of-nebula-ascension?ref=related-3&dd=1&logging_key=78f4dee42c598233b19d1c480ffa2409f1eb966c%3A4378748228', '_blank')" style="cursor: pointer;">
+                                    <h3>Ascension: A couture apparition in motion</h3>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -113,6 +123,37 @@
 
         <!-- Main Content -->
         <div class="layout-container pt-20">
+            <!-- Search Bar Container -->
+            <div class="search-bar-container">
+                <div class="max-w-4xl mx-auto relative">
+                    <input 
+                        type="text" 
+                        v-model="searchQuery"
+                        @keydown.down="selectNextResult"
+                        @keydown.up="selectPreviousResult"
+                        @keydown.enter="selectResult"
+                        placeholder="Search free mobile wallpapers by title or use @ for tags..."
+                        class="w-full bg-gray-100 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-400 text-gray-800"
+                        style="padding: 0.8rem; font-size: 1rem;"
+                    >
+                    <!-- Search Results Dropdown -->
+                    <div v-if="showDropdown" class="search-dropdown absolute w-full mt-2 rounded-lg overflow-hidden z-50 shadow-lg">
+                        <div 
+                            v-for="(result, index) in searchResults" 
+                            :key="index"
+                            @click="selectWallpaperFromSearch(result)"
+                            :class="['p-2 cursor-pointer hover:bg-gray-100 transition-colors duration-200', 
+                                    {'selected-item': index === selectedResultIndex}]"
+                        >
+                            <div class="font-bold text-gray-800">{{ result.description }}</div>
+                            <div class="text-sm text-gray-600">
+                                Tags: {{ result.tags.join(', ') }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Side Panel -->
             <div class="side-panel w-1/3 h-screen overflow-y-auto fixed left-0 p-4 smooth-scroll">
                 <div v-for="wallpaper in sortedWallpapers" :key="wallpaper.filename" 
@@ -650,30 +691,47 @@
 
     <script>
         // Load and display articles from JSON files
-        Promise.all([
-            fetch('articlelist1.json').then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            }),
-            fetch('articlelistai1.json').then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            }),
-            fetch('tooloptions1.json').then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                return response.json();
-            })
-        ])
-        .then(([data1, data2, data3]) => {
-            const articlesList = document.getElementById('articles-list-mobile');
-            const articlesList2 = document.getElementById('articles-list-mobile-2');
-            const articlesList3 = document.getElementById('articles-list-mobile-3');
+        (function() {
+            console.log('Article loading script starting...');
+            
+            // Wait a moment to ensure DOM is ready
+            setTimeout(function() {
+                console.log('Fetching article JSONs...');
+                
+                Promise.all([
+                    fetch('articlelist1.json').then(response => {
+                        console.log('articlelist1.json response:', response.status, response.ok);
+                        if (!response.ok) {
+                            throw new Error(`articlelist1.json HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    }),
+                    fetch('articlelistai1.json').then(response => {
+                        console.log('articlelistai1.json response:', response.status, response.ok);
+                        if (!response.ok) {
+                            throw new Error(`articlelistai1.json HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    }),
+                    fetch('tooloptions1.json').then(response => {
+                        console.log('tooloptions1.json response:', response.status, response.ok);
+                        if (!response.ok) {
+                            throw new Error(`tooloptions1.json HTTP error! status: ${response.status}`);
+                        }
+                        return response.json();
+                    })
+                ])
+                .then(([data1, data2, data3]) => {
+                    console.log('SUCCESS! All article JSON loaded!');
+                    console.log('Tech articles count:', data1.length);
+                    console.log('AI articles count:', data2.length);
+                    console.log('Tools count:', data3.length);
+                    
+                    const articlesList = document.getElementById('articles-list-mobile');
+                    const articlesList2 = document.getElementById('articles-list-mobile-2');
+                    const articlesList3 = document.getElementById('articles-list-mobile-3');
+                    
+                    console.log('Article containers:', articlesList, articlesList2, articlesList3);
             
             // Load tech news for first section (Latest Tech News)
             data1.forEach(article => {
@@ -747,13 +805,15 @@
                 articlesList3.appendChild(articleEntry);
             });
         })
-        .catch(error => {
-            console.error('Error loading articles:', error);
-            
-            // Fallback: Create sample articles when JSON can't be loaded
-            const articlesList = document.getElementById('articles-list-mobile');
-            const articlesList2 = document.getElementById('articles-list-mobile-2');
-            const articlesList3 = document.getElementById('articles-list-mobile-3');
+                .catch(error => {
+                    console.error('ERROR loading articles:', error);
+                    console.error('Error message:', error.message);
+                    console.error('Error stack:', error.stack);
+                    
+                    // Fallback: Create sample articles when JSON can't be loaded
+                    const articlesList = document.getElementById('articles-list-mobile');
+                    const articlesList2 = document.getElementById('articles-list-mobile-2');
+                    const articlesList3 = document.getElementById('articles-list-mobile-3');
             
             const fallbackTools = [
                 {
@@ -889,6 +949,58 @@
             notice3.style.cssText = 'text-align: center; padding: 10px; color: rgba(255,255,255,0.8); font-size: 0.9rem;';
             notice3.textContent = 'Note: Using sample tech articles. To see real articles, serve this file through a web server.';
             articlesList3.appendChild(notice3);
+                });
+            }, 500); // Wait 500ms for DOM to be ready
+        })();
+    </script>
+
+    <script>
+        // Merchandise image expand/collapse functionality
+        function toggleImageExpand(imageContainer) {
+            const isExpanded = imageContainer.classList.contains('expanded');
+            
+            if (isExpanded) {
+                // Collapse the image
+                imageContainer.classList.remove('expanded');
+                const overlay = document.querySelector('.merchandise-overlay');
+                if (overlay) {
+                    overlay.classList.remove('active');
+                }
+            } else {
+                // Expand the image
+                imageContainer.classList.add('expanded');
+                
+                // Create overlay if it doesn't exist
+                let overlay = document.querySelector('.merchandise-overlay');
+                if (!overlay) {
+                    overlay = document.createElement('div');
+                    overlay.className = 'merchandise-overlay';
+                    overlay.onclick = function() {
+                        // Close all expanded images when clicking overlay
+                        const expandedImages = document.querySelectorAll('.merchandise-image.expanded');
+                        expandedImages.forEach(img => {
+                            img.classList.remove('expanded');
+                        });
+                        overlay.classList.remove('active');
+                    };
+                    document.body.appendChild(overlay);
+                }
+                overlay.classList.add('active');
+            }
+        }
+
+        // Close expanded images when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const expandedImages = document.querySelectorAll('.merchandise-image.expanded');
+                expandedImages.forEach(img => {
+                    img.classList.remove('expanded');
+                });
+                const overlay = document.querySelector('.merchandise-overlay');
+                if (overlay) {
+                    overlay.classList.remove('active');
+                }
+            }
         });
     </script>
 </body>
