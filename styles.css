@@ -554,6 +554,7 @@ body {
     backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 1.44px 5.76px rgba(0, 0, 0, 0.1); /* 40% reduction (2.4px * 0.6) */
+    position: relative; /* Required for absolute positioning of child elements */
 }
 
 .merchandise-item-header:hover {
