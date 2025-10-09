@@ -670,7 +670,7 @@ body {
     }
     
     .merchandise-item-header .merchandise-info h3 {
-        font-size: 0.875rem; /* Restore original font size */
+        font-size: 1rem; /* H4 size for desktop viewability */
         margin-bottom: 0.15rem;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
     }
@@ -683,7 +683,7 @@ body {
     .merchandise-item-header .merchandise-btn {
         border-radius: 10.08px;
         padding: 0.252rem 0.504rem; /* Restore original padding */
-        font-size: 0.7392rem; /* Increased by 60% (0.462rem * 1.6) for viewability */
+        font-size: 0.85rem; /* Reduced by 15% (1rem * 0.85) */
         width: 100px; /* Restore original width */
         letter-spacing: 0.18px;
     }
@@ -718,7 +718,7 @@ body {
     }
     
     .merchandise-item-header .merchandise-info h3 {
-        font-size: 0.42rem; /* 40% reduction (0.7rem * 0.6) */
+        font-size: 0.875rem; /* H4 size for mobile viewability */
         color: #1976d2;
         text-shadow: none;
     }
@@ -730,8 +730,10 @@ body {
     
     .merchandise-item-header .merchandise-btn {
         padding: 0.126rem 0.252rem; /* 40% reduction (0.21rem * 0.6, 0.42rem * 0.6) */
-        font-size: 0.4032rem; /* Increased by 60% (0.252rem * 1.6) for viewability */
-        width: 36px; /* 40% reduction (60px * 0.6) */
+        font-size: 0.74375rem; /* Reduced by 15% (0.875rem * 0.85) */
+        width: auto; /* Auto width to fit text on one line */
+        min-width: 120px; /* Minimum width to ensure text fits */
+        white-space: nowrap; /* Prevent text wrapping */
     }
 }
 
