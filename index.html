@@ -75,6 +75,9 @@
     <div id="app" class="min-h-screen">
         <!-- Search Bar -->
         <div class="fixed top-0 left-0 right-0 bg-opacity-90 bg-white z-50 shadow-lg" style="padding: 0.5rem 1rem;">
+            <!-- About Button -->
+            <button id="aboutBtn" class="about-button">About</button>
+            
             <div class="max-w-4xl mx-auto relative">
                 <!-- Title -->
                 <div class="text-center" style="margin-bottom: 0.3rem;">
@@ -312,6 +315,35 @@
                 </div>
             </div>
         </footer>
+    </div>
+
+    <!-- About Modal -->
+    <div id="aboutModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Goal</h2>
+            <div class="values-content">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;leapdeck's goal is to provide free Open-source resources for students and anyone developing apps or web services with generative A.I. tools. While doing this, share Afrofuturistic 3D art made with generative A.I. tools.</p>
+            </div>
+            
+            <h2>Values</h2>
+            <div class="values-content">
+                <h3>Be user-centric:</h3>
+                <p>Think about tomorrow's users today. Understand their needs and habits, while empathizing to create forward-thinking solutions.</p>
+                
+                <h3>Collaborate:</h3>
+                <p>Share and create with others openly to learn together for stronger, more meaningful results. Contribute to different styles of Afrofuturistic art and projects. </p>
+                
+                <h3>Take ownership:</h3>
+                <p>Use open-source tools and principles to build your own solutions.</p>
+                
+                <h3>Life-long Learning:</h3>
+                <p>Continuously seek new knowledge, skills, and perspectives that expand your growth.</p>
+                
+                <h3>Have fun:</h3>
+                <p>Enjoy 8) projects that inspire you and celebrate progress.</p>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -1014,6 +1046,37 @@
                 if (overlay) {
                     overlay.classList.remove('active');
                 }
+            }
+        });
+    </script>
+
+    <script>
+        // About Modal functionality
+        const aboutModal = document.getElementById('aboutModal');
+        const aboutBtn = document.getElementById('aboutBtn');
+        const closeBtn = document.querySelector('.close');
+
+        // Open modal when About button is clicked
+        aboutBtn.onclick = function() {
+            aboutModal.style.display = 'block';
+        }
+
+        // Close modal when X is clicked
+        closeBtn.onclick = function() {
+            aboutModal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            if (event.target == aboutModal) {
+                aboutModal.style.display = 'none';
+            }
+        }
+
+        // Close modal when pressing Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && aboutModal.style.display === 'block') {
+                aboutModal.style.display = 'none';
             }
         });
     </script>
