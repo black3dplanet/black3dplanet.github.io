@@ -1106,4 +1106,157 @@ body {
         font-size: 0.75rem;
         padding: 0.25rem 0.5rem;
     }
+}
+
+/* About Button Styles */
+.about-button {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 1rem;
+    background: linear-gradient(135deg, #1976d2 0%, #1565c0 100%);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+}
+
+.about-button:hover {
+    background: linear-gradient(135deg, #1565c0 0%, #0d47a1 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(25, 118, 210, 0.4);
+}
+
+.about-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(25, 118, 210, 0.3);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #ffffff 0%, #f5f5f5 100%);
+    margin: 5% auto;
+    padding: 1.4rem;
+    border: 1px solid rgba(25, 118, 210, 0.3);
+    border-radius: 15px;
+    width: 63%;
+    max-width: 420px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s ease;
+    position: relative;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal-content h2 {
+    color: #1976d2;
+    font-size: 1.26rem;
+    margin-bottom: 0.7rem;
+    font-weight: bold;
+    border-bottom: 2.1px solid #1976d2;
+    padding-bottom: 0.35rem;
+}
+
+.modal-content h3 {
+    color: #1565c0;
+    font-size: 0.84rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+.modal-content p {
+    color: #333;
+    font-size: 0.7rem;
+    line-height: 1.6;
+    margin-bottom: 0.7rem;
+}
+
+.values-content {
+    margin-bottom: 1.05rem;
+}
+
+.close {
+    color: #666;
+    position: absolute;
+    right: 1.05rem;
+    top: 1.05rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 21px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.close:hover,
+.close:focus {
+    color: #1976d2;
+    background: rgba(25, 118, 210, 0.1);
+    transform: rotate(90deg);
+}
+
+/* Mobile Modal Styles */
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 10% auto;
+        padding: 1.05rem;
+        width: 66.5%;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.05rem;
+    }
+    
+    .modal-content h3 {
+        font-size: 0.77rem;
+    }
+    
+    .modal-content p {
+        font-size: 0.665rem;
+    }
+    
+    .close {
+        right: 0.7rem;
+        top: 0.7rem;
+        font-size: 1.05rem;
+    }
+    
+    .about-button {
+        bottom: 0.3rem;
+        right: 0.5rem;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
 } 
