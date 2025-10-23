@@ -76,7 +76,13 @@
         <!-- Search Bar -->
         <div class="fixed top-0 left-0 right-0 bg-opacity-90 bg-white z-50 shadow-lg" style="padding: 0.5rem 1rem;">
             <!-- About Button -->
-            <button id="aboutBtn" class="about-button">About</button>
+            <button id="aboutBtn" class="btn-15"><span>About</span></button>
+            
+            <!-- AI Tools Button -->
+            <button id="aiToolsBtn" class="btn-15 btn-ai-tools"><span>AI Tools</span></button>
+            
+            <!-- AI Info Button -->
+            <button id="aiInfoBtn" class="btn-15 btn-ai-info"><span>AI Info</span></button>
             
             <div class="max-w-4xl mx-auto relative">
                 <!-- Title -->
@@ -278,7 +284,7 @@
                 </div>
                 
                 <!-- Second Article Section -->
-                <div class="article-section-right">
+                <div class="article-section-right" id="ai-tools-section">
                     <div class="articles-header">
                     A.I. Coding Assistants and Tools
                     </div>
@@ -288,7 +294,7 @@
             
             <!-- Third Article Section -->
             <div class="articles-container-third">
-                <div class="article-section-third">
+                <div class="article-section-third" id="ai-info-section">
                     <div class="articles-header">
                         Latest A.I. News
                     </div>
@@ -1079,6 +1085,42 @@
                 aboutModal.style.display = 'none';
             }
         });
+    </script>
+
+    <script>
+        // AI Tools Button functionality
+        const aiToolsBtn = document.getElementById('aiToolsBtn');
+        const aiToolsSection = document.getElementById('ai-tools-section');
+
+        // Scroll to AI Tools section when button is clicked
+        aiToolsBtn.onclick = function() {
+            const isMobile = window.innerWidth <= 768;
+            const offset = isMobile ? 360 : 400;
+            const elementPosition = aiToolsSection.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
+
+        // AI Info Button functionality
+        const aiInfoBtn = document.getElementById('aiInfoBtn');
+        const aiInfoSection = document.getElementById('ai-info-section');
+
+        // Scroll to AI Info section when button is clicked
+        aiInfoBtn.onclick = function() {
+            const isMobile = window.innerWidth <= 768;
+            const offset = isMobile ? 360 : 400;
+            const elementPosition = aiInfoSection.getBoundingClientRect().top + window.pageYOffset;
+            const offsetPosition = elementPosition - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
     </script>
 </body>
 </html>
