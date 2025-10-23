@@ -24,7 +24,7 @@ body {
 /* Search Bar Container Styles */
 .search-bar-container {
     width: 100%;
-    padding: calc(45vh - 80px) 2rem 2rem 2rem; /* Moved down 20px from previous position */
+    padding: calc(45vh + 20px) 2rem 2rem 2rem; /* Moved down 100px */
     background-color: var(--light-blue-bg);
 }
 
@@ -77,7 +77,7 @@ body {
 /* Update image grid to work within the card */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2.875rem;
     padding: 0;
 }
@@ -242,8 +242,9 @@ body {
     }
     
     .search-bar-container {
-        width: 100%;
-        padding: calc(45vh - 100px) 2rem 2rem 2rem;
+        width: 66.666667%;
+        margin-left: 33.333333%;
+        padding: calc(45vh) 2rem 2rem 2rem;
     }
     
     .side-panel {
@@ -279,7 +280,7 @@ body {
     
     .search-bar-container {
         width: 100%;
-        padding: calc(45vh - 100px) 1rem 1.5rem 1rem;
+        padding: calc(45vh) 1rem 1.5rem 1rem;
     }
     
     .side-panel {
@@ -299,7 +300,7 @@ body {
     }
     
     .image-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 2.875rem;
         padding: 0;
     }
