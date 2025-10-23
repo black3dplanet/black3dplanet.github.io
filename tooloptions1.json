@@ -75,9 +75,19 @@
     "article": "AI Art Generator designed for creativity and fun."
   },
     {
+    "site": "Midjourney",
+    "link": "https://www.midjourney.com",
+    "article": "AI art generator crafting unique images from text prompts in a Discord community."
+  },
+    {
     "site": "Dream AI",
     "link": "https://dream.ai/",
     "article": "Creativity and fun AI art generator also with mobile version."
+  },
+    {
+    "site": "Fal.ai",
+    "link": "https:/fal.ai",
+    "article": "Top AI generative image, video, and audio models, all in one place."
   },
     {
     "site": "Runway AI",
@@ -94,11 +104,7 @@
     "link": "https://openai.com/dall-e-3",
     "article": "OpenAI's AI system creating realistic images from text articles with improved detail control."
   },
-  {
-    "site": "Midjourney",
-    "link": "https://www.midjourney.com",
-    "article": "AI art generator crafting unique images from text prompts in a Discord community."
-  },
+
   {
     "site": "Recraft V3",
     "link": "https://www.recraft.ai",
