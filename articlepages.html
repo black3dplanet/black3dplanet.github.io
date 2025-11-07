@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Tips Articles</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+        
+        .articles-page-container {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1.5rem 0;
+            min-height: 100vh;
+        }
+        
+        .articles-page-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            padding: 0 1rem;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: white;
+        }
+        
+        .articles-list {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        .article-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 1.25rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+            color: white;
+            backdrop-filter: blur(5px);
+        }
+        
+        .article-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(5px);
+        }
+        
+        .article-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            line-height: 1.3;
+            color: white;
+            margin: 0 0 0.5rem 0;
+        }
+        
+        .article-subtitle {
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.4;
+            color: rgba(255, 255, 255, 0.85);
+            margin: 0 0 0.75rem 0;
+        }
+        
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .tag::before {
+            content: "#";
+        }
+        
+        .read-time {
+            font-size: 0.875rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 500;
+        }
+        
+        /* Desktop adjustments */
+        @media (min-width: 769px) {
+            .articles-page-container {
+                padding: 2rem 1rem;
+            }
+            
+            .articles-page-header {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+            
+            .article-card {
+                padding: 1.75rem;
+                border-radius: 8px;
+                margin-bottom: 1rem;
+            }
+            
+            .article-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            }
+            
+            .article-title {
+                font-size: 1.5rem;
+            }
+            
+            .article-subtitle {
+                font-size: 1.05rem;
+            }
+            
+            .read-time {
+                font-size: 0.95rem;
+            }
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .articles-page-container {
+                padding: 1rem 0;
+            }
+            
+            .articles-page-header {
+                font-size: 1.35rem;
+                margin-bottom: 1rem;
+                padding: 0 0.75rem;
+            }
+            
+            .article-card {
+                padding: 1rem 1.25rem;
+                border-radius: 0;
+            }
+            
+            .article-title {
+                font-size: 1.125rem;
+                line-height: 1.35;
+                margin-bottom: 0.4rem;
+            }
+            
+            .article-subtitle {
+                font-size: 0.9rem;
+                margin-bottom: 0.6rem;
+            }
+            
+            .article-tags {
+                margin-bottom: 0.6rem;
+                gap: 0.4rem;
+            }
+            
+            .tag {
+                padding: 0.2rem 0.4rem;
+                font-size: 0.75rem;
+            }
+            
+            .read-time {
+                font-size: 0.8125rem;
+            }
+        }
+        
+        /* Very small mobile screens */
+        @media (max-width: 380px) {
+            .article-title {
+                font-size: 1.05rem;
+            }
+            
+            .article-subtitle {
+                font-size: 0.85rem;
+            }
+            
+            .read-time {
+                font-size: 0.75rem;
+            }
+        }
+        
+        /* Article Detail View Styles */
+        #article-detail-view {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        #article-detail-content .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        #article-detail-content .article-header {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        #article-detail-content .article-title {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin: 0 0 0.5rem 0;
+            color: white;
+        }
+        
+        #article-detail-content .article-meta {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        #article-detail-content .article-content {
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        
+        #article-detail-content .article-content p {
+            margin: 0 0 1.5rem 0;
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        #article-detail-content .article-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1rem 0;
+            color: white;
+        }
+        
+        #article-detail-content .article-content hr {
+            border: none;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            margin: 2.5rem 0;
+        }
+        
+        #article-detail-content .tools-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        #article-detail-content .tools-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #article-detail-content .tools-section li {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        
+        #article-detail-content .tools-section strong {
+            color: white;
+            font-weight: 600;
+        }
+        
+        #article-detail-content .tools-section a {
+            color: #87CEEB;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        
+        #article-detail-content .tools-section a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        #article-detail-content .back-button {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+        }
+        
+        #article-detail-content .back-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateX(-3px);
+        }
+        
+        /* Mobile optimizations for article detail */
+        @media (max-width: 768px) {
+            #article-detail-content .article-container {
+                padding: 1.5rem 1rem;
+            }
+            
+            #article-detail-content .article-title {
+                font-size: 1.5rem;
+            }
+            
+            #article-detail-content .article-content {
+                font-size: 1rem;
+            }
+            
+            #article-detail-content .article-content h3 {
+                font-size: 1.25rem;
+                margin: 2rem 0 0.75rem 0;
+            }
+            
+            #article-detail-content .tools-section {
+                padding: 1rem;
+            }
+            
+            #article-detail-content .tools-section li {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="articles-page-container">
+        <!-- Articles List View -->
+        <div id="articles-list-view">
+            <div class="articles-page-header">
+                A.I. Tips & Best Practices
+            </div>
+            <div class="articles-list" id="articlesList">
+                <!-- Articles will be loaded here dynamically -->
+            </div>
+        </div>
+        
+        <!-- Article Detail View (initially hidden) -->
+        <div id="article-detail-view" style="display: none;">
+            <div id="article-detail-content"></div>
+        </div>
+    </div>
+    
+    <script>
+        // Load AI tips from the JSON file
+        fetch('aitips1.json')
+            .then(response => response.json())
+            .then(data => {
+                const list = document.getElementById('articlesList');
+                
+                data.forEach(article => {
+                    // Create article card (entire card is clickable)
+                    const card = document.createElement('a');
+                    card.className = 'article-card';
+                    card.href = article.link;
+                    card.dataset.articleLink = article.link;
+                    // Set target for external links
+                    if (!article.link.endsWith('.html')) {
+                        card.target = '_blank';
+                    }
+                    
+                    // Title (bold)
+                    const title = document.createElement('h2');
+                    title.className = 'article-title';
+                    title.textContent = article.title;
+                    
+                    // Subtitle (regular weight)
+                    const subtitle = document.createElement('p');
+                    subtitle.className = 'article-subtitle';
+                    subtitle.textContent = article.subtitle;
+                    
+                    // Tags
+                    const tagsContainer = document.createElement('div');
+                    tagsContainer.className = 'article-tags';
+                    
+                    article.tags.forEach(tag => {
+                        const tagElement = document.createElement('span');
+                        tagElement.className = 'tag';
+                        tagElement.textContent = tag;
+                        tagsContainer.appendChild(tagElement);
+                    });
+                    
+                    // Read time
+                    const readTime = document.createElement('div');
+                    readTime.className = 'read-time';
+                    readTime.textContent = article.readTime;
+                    
+                    // Assemble card in order: title → subtitle → tags → read time
+                    card.appendChild(title);
+                    card.appendChild(subtitle);
+                    card.appendChild(tagsContainer);
+                    card.appendChild(readTime);
+                    
+                    // Add click handler for local article files
+                    card.addEventListener('click', function(e) {
+                        const link = this.dataset.articleLink;
+                        // Check if it's a local HTML file
+                        if (link.endsWith('.html')) {
+                            e.preventDefault();
+                            loadArticleDetail(link);
+                        }
+                        // External links will open normally in new tab
+                    });
+                    
+                    list.appendChild(card);
+                });
+            })
+            .catch(error => {
+                console.error('Error loading tips:', error);
+                const list = document.getElementById('articlesList');
+                list.innerHTML = '<div style="text-align: center; padding: 2rem; color: white;">Error loading articles. Please try again later.</div>';
+            });
+        
+        // Function to load article detail
+        function loadArticleDetail(articleUrl) {
+            const listView = document.getElementById('articles-list-view');
+            const detailView = document.getElementById('article-detail-view');
+            const detailContent = document.getElementById('article-detail-content');
+            
+            // Fetch the article HTML
+            fetch(articleUrl)
+                .then(response => response.text())
+                .then(html => {
+                    // Extract just the body content
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, 'text/html');
+                    const articleContainer = doc.querySelector('.article-container');
+                    
+                    if (articleContainer) {
+                        // Load the content - wrap in a div to maintain structure
+                        const wrapper = document.createElement('div');
+                        wrapper.className = 'article-container';
+                        wrapper.innerHTML = articleContainer.innerHTML;
+                        
+                        detailContent.innerHTML = '';
+                        detailContent.appendChild(wrapper);
+                        
+                        // Update the back button to return to list
+                        const backButton = detailContent.querySelector('.back-button');
+                        if (backButton) {
+                            backButton.onclick = function(e) {
+                                e.preventDefault();
+                                showArticlesList();
+                            };
+                            backButton.textContent = '← Back to Articles';
+                        }
+                        
+                        // Switch views
+                        listView.style.display = 'none';
+                        detailView.style.display = 'block';
+                        
+                        // Scroll to position article title below 1st layer
+                        // Wait for next frame to ensure content is rendered
+                        requestAnimationFrame(() => {
+                            const articleTitle = detailContent.querySelector('.article-title');
+                            if (articleTitle) {
+                                const isMobile = window.innerWidth <= 768;
+                                // Offset accounts for fixed header height
+                                const offset = isMobile ? 360 : 400;
+                                const elementPosition = articleTitle.getBoundingClientRect().top + window.pageYOffset;
+                                const offsetPosition = elementPosition - offset;
+
+                                window.scrollTo({
+                                    top: offsetPosition,
+                                    behavior: 'smooth'
+                                });
+                            }
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Error loading article:', error);
+                    alert('Failed to load article. Please try again.');
+                });
+        }
+        
+        // Function to return to articles list
+        function showArticlesList() {
+            const listView = document.getElementById('articles-list-view');
+            const detailView = document.getElementById('article-detail-view');
+            
+            listView.style.display = 'block';
+            detailView.style.display = 'none';
+            
+            // Scroll to show the articles list header below the fixed header
+            requestAnimationFrame(() => {
+                const articlesHeader = document.querySelector('.articles-page-header');
+                if (articlesHeader) {
+                    const isMobile = window.innerWidth <= 768;
+                    // Offset accounts for fixed header height from main page
+                    const offset = isMobile ? 360 : 400;
+                    const elementPosition = articlesHeader.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                } else {
+                    // Fallback to top if header not found
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        }
+    </script>
+</body>
+</html>
+
