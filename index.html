@@ -81,6 +81,9 @@
             <!-- AI Tools Button -->
             <button id="aiToolsBtn" class="btn-15 btn-ai-tools"><span>AI Tools</span></button>
             
+            <!-- AI Tips Button -->
+            <button id="aiTipsBtn" class="btn-15 btn-ai-tips"><span>AI Tips</span></button>
+            
             <!-- AI Info Button -->
             <button id="aiInfoBtn" class="btn-15 btn-ai-info"><span>AI Info</span></button>
             
@@ -273,34 +276,40 @@
         </div>
 
         <!-- Articles Section -->
-        <div class="articles-section">
-            <div class="articles-container">
-                <!-- First Article Section -->
-                <div class="article-section-left">
-                    <div class="articles-header">
-                    Latest Tech News
+        <div class="articles-section" id="articles-main-container">
+            <!-- Original Articles View -->
+            <div id="original-articles-view">
+                <div class="articles-container">
+                    <!-- First Article Section -->
+                    <div class="article-section-left">
+                        <div class="articles-header">
+                        Latest Tech News
+                        </div>
+                        <div id="articles-list-mobile"></div>
                     </div>
-                    <div id="articles-list-mobile"></div>
+                    
+                    <!-- Second Article Section -->
+                    <div class="article-section-right" id="ai-tools-section">
+                        <div class="articles-header">
+                        A.I. Coding Assistants and Tools
+                        </div>
+                        <div id="articles-list-mobile-2"></div>
+                    </div>
                 </div>
                 
-                <!-- Second Article Section -->
-                <div class="article-section-right" id="ai-tools-section">
-                    <div class="articles-header">
-                    A.I. Coding Assistants and Tools
+                <!-- Third Article Section -->
+                <div class="articles-container-third">
+                    <div class="article-section-third" id="ai-info-section">
+                        <div class="articles-header">
+                            Latest A.I. News
+                        </div>
+                        <div id="articles-list-mobile-3"></div>
                     </div>
-                    <div id="articles-list-mobile-2"></div>
                 </div>
             </div>
             
-            <!-- Third Article Section -->
-            <div class="articles-container-third">
-                <div class="article-section-third" id="ai-info-section">
-                    <div class="articles-header">
-                        Latest A.I. News
-                    </div>
-                    <div id="articles-list-mobile-3"></div>
-                </div>
-            </div>
+            <!-- Article Pages View (initially hidden) -->
+            <div id="article-pages-view" style="display: none;"></div>
         </div>
 
         <!-- Footer -->
@@ -1088,38 +1097,105 @@
     </script>
 
     <script>
+        // View switching functionality
+        const originalArticlesView = document.getElementById('original-articles-view');
+        const articlePagesView = document.getElementById('article-pages-view');
+        const articlesMainContainer = document.getElementById('articles-main-container');
+        
+        // Function to load article pages view
+        function loadArticlePages() {
+            fetch('articlepages.html')
+                .then(response => response.text())
+                .then(html => {
+                    // Hide original view
+                    originalArticlesView.style.display = 'none';
+                    
+                    // Show and populate article pages view
+                    articlePagesView.innerHTML = html;
+                    articlePagesView.style.display = 'block';
+                    
+                    // Execute scripts in the loaded HTML
+                    const scripts = articlePagesView.getElementsByTagName('script');
+                    for (let script of scripts) {
+                        eval(script.innerHTML);
+                    }
+                    
+                    // Scroll to the articles section
+                    const isMobile = window.innerWidth <= 768;
+                    const offset = isMobile ? 360 : 400;
+                    const elementPosition = articlesMainContainer.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - offset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading article pages:', error);
+                    alert('Failed to load article pages. Please try again.');
+                });
+        }
+        
+        // Function to restore original view
+        function restoreOriginalView() {
+            // Show original view
+            originalArticlesView.style.display = 'block';
+            
+            // Hide article pages view
+            articlePagesView.style.display = 'none';
+            articlePagesView.innerHTML = '';
+        }
+        
         // AI Tools Button functionality
         const aiToolsBtn = document.getElementById('aiToolsBtn');
         const aiToolsSection = document.getElementById('ai-tools-section');
 
-        // Scroll to AI Tools section when button is clicked
+        // Scroll to AI Tools section and restore original view
         aiToolsBtn.onclick = function() {
-            const isMobile = window.innerWidth <= 768;
-            const offset = isMobile ? 360 : 400;
-            const elementPosition = aiToolsSection.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - offset;
+            restoreOriginalView();
+            
+            setTimeout(() => {
+                const isMobile = window.innerWidth <= 768;
+                const offset = isMobile ? 360 : 400;
+                const elementPosition = aiToolsSection.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - offset;
 
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }, 100);
+        }
+
+        // AI Tips Button functionality
+        const aiTipsBtn = document.getElementById('aiTipsBtn');
+        const aiTipsSection = document.getElementById('ai-tips-section');
+
+        // Load article pages view when button is clicked
+        aiTipsBtn.onclick = function() {
+            loadArticlePages();
         }
 
         // AI Info Button functionality
         const aiInfoBtn = document.getElementById('aiInfoBtn');
         const aiInfoSection = document.getElementById('ai-info-section');
 
-        // Scroll to AI Info section when button is clicked
+        // Scroll to AI Info section and restore original view
         aiInfoBtn.onclick = function() {
-            const isMobile = window.innerWidth <= 768;
-            const offset = isMobile ? 360 : 400;
-            const elementPosition = aiInfoSection.getBoundingClientRect().top + window.pageYOffset;
-            const offsetPosition = elementPosition - offset;
+            restoreOriginalView();
+            
+            setTimeout(() => {
+                const isMobile = window.innerWidth <= 768;
+                const offset = isMobile ? 360 : 400;
+                const elementPosition = aiInfoSection.getBoundingClientRect().top + window.pageYOffset;
+                const offsetPosition = elementPosition - offset;
 
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }, 100);
         }
     </script>
 </body>

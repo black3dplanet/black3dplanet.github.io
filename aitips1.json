@@ -1,0 +1,31 @@
+[
+    {
+        "title": "Teachers, LLMs, and the gradual A.I. Wave in Class",
+        "subtitle": "Most technologies enter schools with pep rallies and banners—or at least some clunky Powerpoint slides. Large language models..",
+        "readTime": "5 min read",
+        "tags": ["ai", "prompts", "bestpractices"],
+        "link": "articlestipsection1.html"
+    },
+    {
+        "title": "Bigger Data Centers, Bigger AI Engines",
+        "subtitle": "The conversation around AI these days feels a little like watching cities sprout overnight. Blink once, and there's a new research hub. Blink twice, and Amazon, Microsoft...",
+        "readTime": "7 min read",
+        "tags": ["security", "codereview", "ai"],
+        "link": "articlestipsection2.html"
+    },
+    {
+        "title": "HBCUs + AI: A Surge of Innovations",
+        "subtitle": "If someone wandered onto the campus of an HBCU this year—say Howard, North Carolina A&T, Spelman, or Florida A&M—they might notice something subtle humming beneath the usual student chatter...",
+        "readTime": "7 min read",
+        "tags": ["ai", "hbcus","models", "tips"],
+        "link": "articlestipsection4.html"
+    },
+    {
+        "title": "MCP and Curious New LLMs",
+        "subtitle": "Large language models have always needed a lot of “space” to think. That isn’t a lab-coat definition, but it’s good enough—these models...",
+        "readTime": "4 min read",
+        "tags": ["ai", "workflow", "productivity"],
+        "link": "articlestipsection3.html"
+    }
+]
+

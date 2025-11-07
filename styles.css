@@ -461,6 +461,13 @@ body {
     text-decoration: underline;
 }
 
+.tool-description {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 0.5rem;
+    line-height: 1.5;
+}
+
 /* Desktop Articles Layout */
 @media (min-width: 769px) {
     .articles-section {
@@ -1159,7 +1166,7 @@ body {
   overflow: hidden;
   padding: 0.4rem 1.5rem;
   position: absolute;
-  bottom: calc(0.5rem + 40px);
+  bottom: calc(0.5rem);
   right: 1rem;
   z-index: 100;
   font-size: 0.75rem;
@@ -1203,12 +1210,17 @@ body {
 
 /* AI Tools Button - positioned below About button */
 .btn-ai-tools {
-  bottom: calc(0.5rem + 40px - 47px) !important;
+  bottom: calc(0.5rem - 47px) !important;
 }
 
-/* AI Info Button - positioned below AI Tools button */
+/* AI Tips Button - positioned below AI Tools button */
+.btn-ai-tips {
+  bottom: calc(0.5rem - 94px) !important;
+}
+
+/* AI Info Button - positioned below AI Tips button */
 .btn-ai-info {
-  bottom: calc(0.5rem + 40px - 94px) !important;
+  bottom: calc(0.5rem - 141px) !important;
 }
 
 /* Modal Styles */
@@ -1328,17 +1340,21 @@ body {
     }
     
     .btn-15 {
-        bottom: calc(0.3rem + 40px - 60px);
+        bottom: calc(0.3rem - 60px);
         right: 0.5rem;
         padding: 0.3rem 1rem;
         font-size: 0.65rem;
     }
     
     .btn-ai-tools {
-        bottom: calc(0.3rem + 40px - 39px - 60px) !important;
+        bottom: calc(0.3rem - 39px - 60px) !important;
+    }
+    
+    .btn-ai-tips {
+        bottom: calc(0.3rem - 78px - 60px) !important;
     }
     
     .btn-ai-info {
-        bottom: calc(0.3rem + 40px - 78px - 60px) !important;
+        bottom: calc(0.3rem - 117px - 60px) !important;
     }
 } 
