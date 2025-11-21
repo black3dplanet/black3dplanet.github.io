@@ -538,7 +538,7 @@ body {
     padding: 6px 0.54rem; /* 40% reduction (10px * 0.6, 0.9rem * 0.6) */
     margin: 0.12rem 0 0.3rem 0; /* 40% reduction of all margins */
     backdrop-filter: blur(3px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 0.7px solid rgba(255, 255, 255, 0.1); /* 30% reduction (1px * 0.7) */
 }
 
 .merchandise-container-header {
@@ -560,7 +560,7 @@ body {
     overflow: hidden;
     transition: all 0.3s ease;
     backdrop-filter: blur(6px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 0.7px solid rgba(255, 255, 255, 0.2); /* 30% reduction (1px * 0.7) */
     box-shadow: 0 1.44px 5.76px rgba(0, 0, 0, 0.1); /* 40% reduction (2.4px * 0.6) */
     position: relative; /* Required for absolute positioning of child elements */
 }
@@ -583,12 +583,13 @@ body {
 .merchandise-item-header .merchandise-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform 0.3s ease;
+    transform: scale(0.98); /* 40% increase from 0.7 (0.7 × 1.4 = 0.98) */
 }
 
 .merchandise-item-header:hover .merchandise-image img {
-    transform: scale(1.05);
+    transform: scale(1.029); /* Hover slightly enlarges from 0.98 to 1.029 (5% increase) */
 }
 
 .merchandise-item-header .merchandise-info {
