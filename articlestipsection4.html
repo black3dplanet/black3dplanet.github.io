@@ -132,6 +132,30 @@
             transform: translateX(-3px);
         }
         
+        .promo-banner {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+        
+        .promo-banner a {
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .promo-banner a:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+        
+        .promo-banner img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        
         /* Mobile optimizations */
         @media (max-width: 768px) {
             .article-container {
@@ -229,6 +253,13 @@
                 </div>
             </div>
         </article>
+        
+        <!-- Promotional Banner -->
+        <div class="promo-banner">
+            <a href="https://www.etsy.com/shop/CodeWaterStudio?ref=shop-header-name&listing_id=4408176390&from_page=listing" target="_blank" rel="noopener noreferrer">
+                <img src="B3DPItemPromo1.png" alt="Shop CodeWaterStudio on Etsy">
+            </a>
+        </div>
     </div>
 </body>
 </html>
