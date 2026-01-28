@@ -5,64 +5,259 @@
     "article": "Ship quickly with user interface source code, clone existing interfaces, AI-powered customization."
   },
   {
-    "site": "Windsurf AI IDE",
-    "link": "https://windsurf.com",
-    "article": "Intelligent IDE combining AI agents and intuitive co-pilots for coding efficiency."
-  },
-  {
-    "site": "Claude",
-    "link": "https://claude.ai",
-    "article": "A next generation AI assistant built by Anthropic."
-  },
-  {
     "site": "Cursor",
-    "link": "https://cursor.so/",
-    "article": "Enhances VS Code with AI that understands, improves, and writes code."
+    "link": "https://cursor.com/",
+    "article": "AI-first code editor that integrates models directly into your workflow for inline suggestions, refactoring, and debugging."
+  },
+  {
+    "site": "Claude (Anthropic)",
+    "link": "https://claude.ai/",
+    "article": "AI assistant by Anthropic focused on helpfulness, safety, and constitutional AI for chat, writing, coding, and analysis."
+  },
+  {
+    "site": "Gemini (Google)",
+    "link": "https://gemini.google.com/",
+    "article": "Google’s multimodal AI assistant integrating search, coding, and productivity features across web and mobile experiences."
+  },
+  {
+    "site": "Perplexity AI",
+    "link": "https://www.perplexity.ai/",
+    "article": "Answer engine combining web search and AI to deliver concise, cited responses and follow-up exploration in a chat interface."
+  },
+  {
+    "site": "Microsoft Copilot",
+    "link": "https://copilot.microsoft.com/",
+    "article": "AI assistant integrated with Microsoft services to help with search, content creation, work documents, and productivity tasks."
+  },
+  {
+    "site": "GitHub Copilot",
+    "link": "https://github.com/features/copilot",
+    "article": "AI coding assistant in editors like VS Code that suggests code, tests, and documentation directly from your context."
+  },
+  {
+    "site": "Zapier AI / Chatbots",
+    "link": "https://zapier.com/ai",
+    "article": "Tools for building AI chatbots and automations that connect large language models with thousands of business apps and workflows."
+  },
+  {
+    "site": "ElevenLabs (voice)",
+    "link": "https://elevenlabs.io/",
+    "article": "AI voice platform offering lifelike text-to-speech, voice cloning, dubbing, and audio tools for creators and developers."
+  },
+  {
+    "site": "Vercel",
+    "link": "https://vercel.com/",
+    "article": "Frontend cloud platform for developing, previewing, and shipping web applications with integrated serverless and edge functions."
+  },
+  {
+    "site": "Windsurf",
+    "link": "https://windsurf.com/",
+    "article": "AI-powered coding environment aimed at helping developers build, refactor, and ship software faster with intelligent assistance."
+  },
+  {
+    "site": "Codex",
+    "link": "https://openai.com/codex/",
+    "article": "Code-focused AI model from OpenAI that translates natural language instructions into working code in many programming languages."
   },
   {
     "site": "Lovable",
     "link": "https://lovable.dev",
-    "article": "Transforms ideas into apps instantly, using natural language; AI-powered, code ownership guaranteed."
-  },
-  {
-    "site": "Github Copilot",
-    "link": "https://github.com/features/copilot",
-    "article": "Coding assistant designed to supercharge your productivity and improve your workflow."
+    "article": "AI-powered app builder that helps generate, iterate, and deploy full-stack applications from natural language descriptions."
   },
   {
     "site": "Firebase Studio",
-    "link": "https://firebase.studio/",
-    "article": "Accelerates your development with AI agents, builds backends, front ends, and mobile apps."
+    "link": "https://firebase.studio",
+    "article": "Tooling around Firebase that streamlines building, managing, and deploying backend services for web and mobile apps."
   },
   {
     "site": "Cline",
     "link": "https://cline.bot/",
-    "article": "Collaborative AI partner that's open source, fully extensible, and improves developer impact."
+    "article": "AI coding agent designed to work alongside developers, handling tasks like editing, debugging, and running code autonomously."
   },
   {
     "site": "Aider",
     "link": "https://aider.chat/",
-    "article": "Lets you pair program with your selected LLM for a new project or build on your existing codebase."
+    "article": "Command-line AI pair programmer that edits your existing codebase via git-aware chats in your terminal environment."
   },
   {
     "site": "Trae",
     "link": "https://www.trae.ai/",
-    "article": "AI-powered IDE offering real-time assistance, smart code generation, and productivity."
+    "article": "AI platform focused on building and orchestrating autonomous agents for business workflows, data tasks, and operations."
   },
   {
     "site": "Kiro",
     "link": "https://kiro.dev",
-    "article": "An agentic, spec-driven AI IDE that transforms prompts into structured specs, tasks, and code. "
+    "article": "Developer assistant that integrates AI into your coding workflow, helping with generation, refactoring, and understanding codebases."
   },
   {
-    "site": "Replit Agent",
+    "site": "Replit",
     "link": "https://replit.com",
-    "article": "AI assistant for the collaborative browser-based IDE, empowering coding with smart assistance."
+    "article": "Online IDE and hosting platform with collaborative coding, instant deployments, and built-in AI tools for developers."
   },
   {
     "site": "AWS App Studio",
-    "link": "https://aws.amazon.com/appstudio/",
-    "article": "Generative-AI low-code platform for secure enterprise-grade app creation."
+    "link": "https://aws.amazon.com/appstudio",
+    "article": "Amazon service that lets users build applications quickly using AI assistance and AWS-managed infrastructure components."
+  },
+  {
+    "site": "Bolt",
+    "link": "https://bolt.new/",
+    "article": "AI-assisted app builder that turns prompts into full-stack applications with iteration, hosting, and code export options."
+  },
+  {
+    "site": "Baset44",
+    "link": "https://base44.com/",
+    "article": "Platform providing AI-driven tools and infrastructure to accelerate software development and product experimentation."
+  },
+  {
+    "site": "AskCodi",
+    "link": "https://www.askcodi.com/",
+    "article": "AI assistant for developers offering code completion, documentation help, test generation, and language support inside editors."
+  },
+  {
+    "site": "Amazon Q Developer",
+    "link": "https://aws.amazon.com/q/developer/",
+    "article": "AWS generative AI assistant that helps developers understand code, generate changes, and interact with AWS resources."
+  },
+  {
+    "site": "Tabnine",
+    "link": "https://www.tabnine.com/",
+    "article": "AI code completion tool that runs locally or in cloud, offering privacy-focused suggestions trained on open-source code."
+  },
+  {
+    "site": "OpenHands",
+    "link": "https://docs.openhands.dev/overview/introduction",
+    "article": "Open-source AI software engineering agent that autonomously edits repositories, runs tools, and executes development tasks."
+  },
+  {
+    "site": "Rork",
+    "link": "https://rork.com/",
+    "article": "Platform centered on AI-powered coding and collaboration, helping teams prototype, review, and ship software faster."
+  },
+  {
+    "site": "Void Editor",
+    "link": "https://voideditor.com/",
+    "article": "Modern code editor enhanced with AI features for smarter navigation, suggestions, and project-wide code understanding."
+  },
+  {
+    "site": "AmpCode",
+    "link": "https://ampcode.com/",
+    "article": "AI development environment that helps generate, refactor, and maintain applications with conversational guidance."
+  },
+  {
+    "site": "ZedDev",
+    "link": "https://zed.dev/",
+    "article": "High-performance, multiplayer code editor with AI-assisted development features and low-latency collaboration for teams."
+  },
+  {
+    "site": "Qodo",
+    "link": "https://www.qodo.ai/",
+    "article": "AI coding and app-building platform that lets users describe features and generate production-ready codebases quickly."
+  },
+  {
+    "site": "Junie",
+    "link": "https://www.jetbrains.com/junie/",
+    "article": "JetBrains AI assistant integrated with IDEs to help with code generation, navigation, explanations, and refactoring."
+  },
+  {
+    "site": "AugmentCode",
+    "link": "https://www.augmentcode.com/",
+    "article": "AI tool focused on augmenting developer productivity with code suggestions, explanations, and repository-level understanding."
+  },
+  {
+    "site": "KiloCode",
+    "link": "https://kilo.ai/",
+    "article": "AI coding assistant and automation platform built to help teams generate, analyze, and maintain complex software systems."
+  },
+  {
+    "site": "Gitar",
+    "link": "https://gitar.ai/",
+    "article": "AI assistant for software projects that understands repositories, suggests changes, and supports collaborative coding workflows."
+  },
+  {
+    "site": "Mistral AI",
+    "link": "https://mistral.ai/",
+    "article": "Company developing open and commercial large language models for chat, coding, and enterprise AI applications."
+  },
+  {
+    "site": "Warp Dev",
+    "link": "https://www.warp.dev/",
+    "article": "Modern terminal with AI features, structured commands, and collaboration tools to improve developer productivity."
+  },
+  {
+    "site": "Smyth OS",
+    "link": "https://smythos.com/",
+    "article": "Platform for building, orchestrating, and deploying AI agents that connect to tools, data sources, and enterprise workflows."
+  },
+  {
+    "site": "Xano",
+    "link": "https://www.xano.com/",
+    "article": "No-code backend platform providing APIs, database, and business logic for applications without managing servers."
+  },
+  {
+    "site": "Google Antigraviity",
+    "link": "https://antigravity.google/",
+    "article": "Google experimental experience featuring playful, physics-bending interactions to showcase creative web technologies."
+  },
+  {
+    "site": "Daytona",
+    "link": "https://www.daytona.io/",
+    "article": "Developer platform offering reproducible cloud development environments to standardize and accelerate onboarding."
+  },
+  {
+    "site": "Bubble IO",
+    "link": "https://bubble.io/",
+    "article": "No-code visual web app builder for designing, hosting, and scaling full-featured applications without traditional programming."
+  },
+  {
+    "site": "PromptHub",
+    "link": "https://www.prompthub.us/",
+    "article": "Tooling for organizing, testing, and collaborating on prompts and AI workflows across teams and projects."
+  },
+  {
+    "site": "Stainless",
+    "link": "https://www.stainless.com/",
+    "article": "Platform that helps companies generate robust SDKs and client libraries from APIs with strong type safety."
+  },
+  {
+    "site": "Codiga",
+    "link": "https://www.codiga.io/",
+    "article": "Code analysis and review tool that checks style, security, and quality issues with automated insights for developers."
+  },
+  {
+    "site": "CodeRabbit",
+    "link": "https://www.coderabbit.ai/",
+    "article": "AI-powered code review assistant that comments on pull requests, suggesting improvements and catching potential issues."
+  },
+  {
+    "site": "Supabase",
+    "link": "https://supabase.com/",
+    "article": "Open-source Firebase alternative offering Postgres database, authentication, storage, and edge functions for apps."
+  },
+  {
+    "site": "Pocketbase",
+    "link": "https://pocketbase.io/",
+    "article": "Lightweight open-source backend in a single binary with database, auth, and realtime subscriptions."
+  },
+  {
+    "site": "Railway",
+    "link": "https://railway.com/",
+    "article": "Cloud platform for deploying applications and databases with simple workflows, environments, and observability."
+  },
+  {
+    "site": "Pear AI",
+    "link": "https://www.trypear.ai/",
+    "article": "AI coding pair that integrates into development workflows, helping write, refactor, and understand complex codebases."
+  },
+  {
+    "site": "Theia",
+    "link": "https://theia-ide.org/",
+    "article": "Extensible, open-source cloud and desktop IDE framework used to build customized development environments."
+  },
+  {
+    "site": "Traycer",
+    "link": "https://traycer.ai/",
+    "article": "AI-powered debugger and runtime analysis tool to trace, inspect, and understand program behavior more easily."
   },
   {
     "site": "Stable Diffusion",
